@@ -4,3 +4,8 @@ thumbs.db
 node_modules
 npm_debug.log
 npm-debug.log
+
+.Rproj.user
+.Rhistory
+
+shinyappsv/server.R

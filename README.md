@@ -17,7 +17,8 @@ The server version of the IDE can be found here: [https://www.rstudio.com/ide/se
 
 ## Setup
 
-Install node packages with `npm install`
+- Install node packages with `npm install`
+- Duplicate server.R.sample to server.R and set the endpoint
 
 ### Installation errors
 
@@ -33,3 +34,9 @@ OS X mountain Lion requires XQuartz.
 ## Run
 
 - 
+
+## Apps
+
+### shinyapp
+
+### shinyappsv
