@@ -85,10 +85,11 @@ Make sure everyting is installed
 
 ### Intall the SPARQL package
 Once you are logged into the rstudio server you will need to install the SPARQL packages
+
 - Go to the packages panel in the bottom right window
-- install packages
-- search for SPARQL and install it
-- Need to install libxml and RcURL:
+- Select 'install packages'
+- Search for SPARQL and install it
+- If you get errors, you'll need to install libxml and RcURL:
 ```
 sudo yum -y install libxml2-devel
 sudo yum -y install libcurl-devel
