@@ -34,6 +34,11 @@ The server version of the IDE can be found here: [https://www.rstudio.com/ide/se
 
 ## Install on a VM. [Official intructions](http://www.rstudio.com/shiny/server/install-opensource)
 
+- Get up to date
+```
+sudo yum update
+? rpm update install
+```
 - You must first setup R and Shiny R. To do this you need to install the Extra Packages for Enterprise Linux (EPEL) package from [Fedora](https://fedoraproject.org/wiki/EPEL) 
 - You can enable EPEL with the Redhat Package Manager (RPM)
 ```
@@ -83,7 +88,12 @@ Once you are logged into the rstudio server you will need to install the SPARQL 
 - Go to the packages panel in the bottom right window
 - install packages
 - search for SPARQL and install it
-- Need to install libxml and RcURL
+- Need to install libxml and RcURL:
+```
+sudo yum -y install libxml2-devel
+sudo yum -y install libcurl-devel
+```
+- Now SPARQL will appear in the packages and you can select it
 
 ### Installation errors
 
