@@ -107,6 +107,10 @@ You need to install R as well as the RStudio IDE
 OS X mountain Lion requires XQuartz.
 `brew cask install xquartz`
 
+### Install the iGraph package
+
+- Go to the packages panel, select 'install packages', search for igraph and install with dependencies
+
 ## Apps
 
 ### shinyapp
