@@ -6,6 +6,16 @@ SPARQLverse implementation with [R](http://www.rstudio.com/)
 
 - Boot up the system with `sudo rstudio-server start` (sometimes you need to use `restart`) and access on port 8787 (http://ws-akeen:8787/).
 - Log in as the user, or paraccel
+- Run this command from the RStudio Console panel:
+```
+runApp('~/sparqlverse-r/<<your app>>')
+```
+It will try to automatically pop open a new window with the visualization. If it does not work, it will tell you the port. Copy that and follow this pattern: `http://ws-akeen:8787/p/<<port>>`
+ 
+or from the terminal 
+```
+R -e "shiny::runApp('~/sparqlverse-r/shinyappsv')" &
+```
 
 Shiny Server
 
@@ -95,6 +105,26 @@ sudo yum -y install libxml2-devel
 sudo yum -y install libcurl-devel
 ```
 - Now SPARQL will appear in the packages and you can select it
+
+You can also install through the terminal:
+```
+R
+install.packages("SPARQL",dependencies="TRUE");
+```
+
+#### The problem with accessing packages through shiny
+
+The shiny user needs to have access to the R packages.
+
+```
+# Make the shiny user accessable
+chmod 777 /home/shiny
+# Copy the R package from 
+cd shiny
+cp -r ~/R .
+```
+
+Ideally, this would be a symlink to our main directory. 
 
 ### Installation errors
 
