@@ -110,6 +110,7 @@ You can also install through the terminal:
 ```
 R
 install.packages("SPARQL",dependencies="TRUE");
+install.packages("igraph");
 ```
 
 #### The problem with accessing packages through shiny
