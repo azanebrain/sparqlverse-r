@@ -7,7 +7,7 @@ endpoint <- "http://ws-akeen:8080/runQuery.html"
 # Define server logic 
 shinyServer(function(input, output) {
   
-  query <- 
+queryTemplate <- 
 "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 PREFIX d1187: <http://data-gov.tw.rpi.edu/vocab/p/1187/>
 SELECT ?ye ?fi ?ac ?avgperfire
@@ -19,9 +19,14 @@ WHERE {GRAPH <d1187>{
     BIND(xsd:double(?fires) as ?fi)
     BIND(xsd:double(?acres) as ?ac)
     BIND(?ac/?fi AS ?avgperfire)
+FILTER(?ye >= ?:yearMin && ?ye <= ?:yearMax)
 }}ORDER BY ?ye"
-  
-results <-reactive({SPARQL(endpoint, query)$results})
+
+query <-reactive({temp <- gsub("\\?:yearMin", input$yearRange[1], queryTemplate)
+                  gsub("\\?:yearMax", input$yearRange[2], temp)
+})
+                  
+results <-reactive({SPARQL(endpoint, query())$results})
   
 output$avgAcresPerFirePlot <- renderPlot({
   p <- ggplot(results(), aes(x=ye, y=avgperfire, group=1)) +
@@ -31,7 +36,7 @@ output$avgAcresPerFirePlot <- renderPlot({
     xlab("Year") +
     ylab("Average acres burned per fire")
   print(p)
-})
+}, width = "auto", height = 600)
 
 output$numberFiresPlot <- renderPlot({
   p <- ggplot(results(), aes(x=ye, y=fi, group=1)) +
@@ -41,7 +46,7 @@ output$numberFiresPlot <- renderPlot({
     xlab("Year") +
     ylab("Number of fires")
   print(p)
-})
+}, width = "auto", height = 600)
 
 output$acresBurnedPlot <- renderPlot({
   p <- ggplot(results(), aes(x=ye, y=ac, group=1)) +
@@ -51,11 +56,11 @@ output$acresBurnedPlot <- renderPlot({
     xlab("Year") +
     ylab("Acres burned")
   print(p)
-})
+}, width = "auto", height = 600)
 
 output$avgFirePie <- renderPlot({
   pie(results()$avgperfire, labels = results()$ye)
-})
+}, width = "auto", height = 800)
 
 # Generate an HTML table view of the data
 output$resultsTable <- renderDataTable({
@@ -63,7 +68,7 @@ output$resultsTable <- renderDataTable({
 })
 
 output$SPARQLquery <- renderText({
-  query
+  query() 
 })
   
 })
