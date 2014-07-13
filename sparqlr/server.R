@@ -1,9 +1,9 @@
 library(shiny)
 library(SPARQL)
 
-endpoint <- "http://dev-irpg-sverse:8080/runQuery.html"
+endpoint <- "http://ws-akeen:8080/"
 defaultLimit <- 10
-endpoints <- c("http://localhost:3030/DS/query",   "http://dev-irpg-sverse:8080/runQuery.html", "http://ws-akeen:8080/runQuery.html")
+endpoints <- c("http://ws-akeen:8080/runQuery.html",   "http://ws-emartin:8080/runQuery.html")
 predicateQuery <- "SELECT DISTINCT ?predicate where {GRAPH <tickit> {?s ?predicate ?o}}"
 
 graphQuery <- "SELECT ?name WHERE {table \"stc_tbl_perm\"} ORDER BY ?id"

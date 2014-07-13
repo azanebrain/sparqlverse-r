@@ -1,7 +1,7 @@
 library(SPARQL) # SPARQL querying package
 library(ggplot2)
 
-endpoint <- "http://dev-irpg-sverse:8080/runQuery.html"
+endpoint <- "http://ws-akeen:8080/"
 
 
 query <- 

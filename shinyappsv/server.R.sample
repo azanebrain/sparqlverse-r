@@ -6,13 +6,15 @@ endpoint <- "http://ws-akeen:8080"
 # Define server logic
 shinyServer(function(input, output) {
 
-queryTemplate <-
-"SELECT ?state (COUNT(*) AS ?total)
+queryTemplate <- 
+    "SELECT ?state (COUNT(*) AS ?total)
 FROM <tickit>
 WHERE { ?venue <venuestate> ?state .}
-GROUP BY ?state ORDER BY desc(?total) ?state LIMIT "
+GROUP BY ?state ORDER BY desc(?total) ?state LIMIT ?:limit" 
+  
+  #query <-reactive({paste(queryTemplate, input$limit)})
+  query <-reactive({gsub("\\?:limit", input$limit, queryTemplate)})
 
-query <-reactive({paste(queryTemplate, input$limit)})
 results <-reactive({SPARQL(endpoint, query())$results})
 
   output$mostPopularStatePlot <- renderPlot({
