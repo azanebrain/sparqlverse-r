@@ -9,13 +9,13 @@ shinyUI(pageWithSidebar(
   # Slider to limit number of results returned
   sidebarPanel(
     wellPanel(
-#       sliderInput("limit", 
-#                   "Limit query results:", 
-#                   min = 1,
-#                   max = 50, 
-#                   value = 1, 
-#                   animate=TRUE,
-#       )
+      sliderInput("yearRange", 
+                  "Limit query results:", 
+                  min = 1960,
+                  max = 2008, 
+                  step = 1,
+                  value = c(1960, 2008), 
+      )
       ),   
     checkboxInput(inputId = "showQuery",
                   label = "Show Query",
@@ -28,10 +28,10 @@ shinyUI(pageWithSidebar(
   # Show the pie chart of most popular states
   mainPanel(
     tabsetPanel(
-       tabPanel("Avg Acres/Fire Plot", plotOutput("avgAcresPerFirePlot")),
+      tabPanel("Table", dataTableOutput("resultsTable")),
+      tabPanel("Avg Acres/Fire Plot", plotOutput("avgAcresPerFirePlot")),
        tabPanel("Number Fires Plot", plotOutput("numberFiresPlot")),
        tabPanel("Acres Burned Plot", plotOutput("acresBurnedPlot")),
-       tabPanel("Avg Acres/Fire Pie", plotOutput("avgFirePie")),
-      tabPanel("Table", dataTableOutput("resultsTable"))
+       tabPanel("Avg Acres/Fire Pie", plotOutput("avgFirePie"))
     )
   )))
