@@ -4,17 +4,17 @@ library(shiny)
 shinyUI(pageWithSidebar(
   
   # Application title
-  headerPanel(title = "Forest Fires", windowTitle = "Forest Fires"),
+  headerPanel(title = "Ego Group", windowTitle = "Ego Group"),
   
   # Slider to limit number of results returned
   sidebarPanel(
     wellPanel(
-      sliderInput("yearRange", 
-                  "Set Year Range:", 
-                  min = 1960,
-                  max = 2008, 
+      sliderInput("limit", 
+                  "Set limit:", 
+                  min = 1,
+                  max = 100, 
                   step = 1,
-                  value = c(1960, 2008), 
+                  value = 10, 
       )
       ),   
     checkboxInput(inputId = "showQuery",
@@ -29,9 +29,6 @@ shinyUI(pageWithSidebar(
   mainPanel(
     tabsetPanel(
       tabPanel("Table", dataTableOutput("resultsTable")),
-      tabPanel("Avg Acres/Fire Plot", plotOutput("avgAcresPerFirePlot")),
-       tabPanel("Number Fires Plot", plotOutput("numberFiresPlot")),
-       tabPanel("Acres Burned Plot", plotOutput("acresBurnedPlot")),
-       tabPanel("Avg Acres/Fire Pie", plotOutput("avgFirePie"))
+      tabPanel("Graph", plotOutput("egoPlot"))
     )
   )))
