@@ -20,16 +20,17 @@ WHERE{
   BIND(CONCAT(?ffname, ?flname) AS ?friendName)
 {
   { BIND (<person1> AS ?s)
-    ?s <friend> ?o. 
+    ?s <friend> ?o.
+    BIND(0 AS ?close)
    }
    UNION
    {
       <person1> <friend> ?s.
       <person1> <friend> ?o.
       ?s <friend> ?o 
-   BIND(0 AS ?close)
+   BIND(1 AS ?close)
     }
-}} ORDER BY ?close ?s  LIMIT ?:limit"
+}} ORDER BY DESC(?close) ?s  LIMIT ?:limit"
 
     
 query <-reactive({gsub("\\?:limit", input$limit, queryTemplate)})
