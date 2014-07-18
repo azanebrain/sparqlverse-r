@@ -9,12 +9,14 @@ shinyUI(pageWithSidebar(
   # Slider to limit number of results returned
   sidebarPanel(
     wellPanel(
+      numericInput("id", "PersonID:", 1,
+                   min = 1, max = 49990),
       sliderInput("limit", 
                   "Set limit:", 
                   min = 1,
                   max = 100, 
                   step = 1,
-                  value = 10, 
+                  value = 50, 
       )
       ),   
     checkboxInput(inputId = "showQuery",
