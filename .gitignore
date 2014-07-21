@@ -8,4 +8,4 @@ npm-debug.log
 .Rproj.user
 .Rhistory
 
-shinyappsv/server.R
+server.R
