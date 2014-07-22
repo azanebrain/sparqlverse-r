@@ -31,6 +31,13 @@ On your VM go to port 3838/sparqlverse-r/<<your app>> . This opens the /srv/shin
 - Duplicate server.R.sample to server.R and set the endpoint
 - Read any specific instructions in the local reamde
 
+### Running in /srv
+If you cannot clone the repo to /srv, copy from your main directory to /srv. Check the ownership and make sure all of the main files are owned by the paraccel user and paraccel group
+```
+sudo chown -R paraccel:paraccel *
+sudo chown -R paraccel:paraccel .git 
+sudo chown -R paraccel:paraccel .gitignore
+```
 ## Install Shiny
 ```
 R -e "install.packages('shiny')" &
