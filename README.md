@@ -10,12 +10,11 @@ SPARQLverse implementation with [R](http://www.rstudio.com/)
 ```
 runApp('~/sparqlverse-r/<<your app>>')
 ```
-It will try to automatically pop open a new window with the visualization. If it does not work, it will tell you the port. Copy that and follow this pattern: `http://ws-akeen:8787/p/<<port>>`
- 
 or from the terminal 
 ```
 R -e "shiny::runApp('~/sparqlverse-r/shinyappsv')" &
 ```
+It will try to automatically pop open a new window with the visualization. If it does not work, it will tell you the port. Copy that and follow this pattern: `http://ws-akeen:8787/p/<<port>>`
 
 Shiny Server
 
@@ -26,6 +25,11 @@ Shiny Server
 - Clone the repo
 - Install node packages with `npm install`
 - Duplicate server.R.sample to server.R and set the endpoint
+
+## Install Shiny
+```
+R -e "install.packages('shiny')" &
+```
 
 ## Install locally
 
@@ -99,7 +103,7 @@ Once you are logged into the rstudio server you will need to install the SPARQL 
 - Go to the packages panel in the bottom right window
 - Select 'install packages'
 - Search for SPARQL and install it
-- If you get errors, you'll need to install libxml and RcURL:
+- If you get errors, you will need to install libxml and RcURL:
 ```
 sudo yum -y install libxml2-devel
 sudo yum -y install libcurl-devel
