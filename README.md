@@ -20,6 +20,10 @@ Shiny Server
 
 - Boot up the Shiny Server with `start shiny-server` and access port 3838 (https://ws-akeen:3838)
 
+## Run in the browser
+
+On your VM go to port 3838/sparqlverse-r/<<your app>> . This opens the /srv/shiny-server/ directory
+
 ## Setup 
 
 - Clone the repo to /srv/shiny-server on the VM
