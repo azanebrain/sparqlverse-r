@@ -22,9 +22,10 @@ Shiny Server
 
 ## Setup 
 
-- Clone the repo
+- Clone the repo to /srv/shiny-server on the VM
 - Install node packages with `npm install`
 - Duplicate server.R.sample to server.R and set the endpoint
+- Read any specific instructions in the local reamde
 
 ## Install Shiny
 ```
