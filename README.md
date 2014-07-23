@@ -30,6 +30,10 @@ On your VM go to port 3838/sparqlverse-r/<<your app>> . This opens the /srv/shin
 - Install node packages with `npm install`
 - Duplicate server.R.sample to server.R and set the endpoint
 - Read any specific instructions in the local reamde
+- install shiny packages as sudo:
+```
+sudo su -\ -c "R -e \"install.packages('<package name>', repos='http://cran.rstudio.com/')\"" &
+```
 
 ### Running in /srv
 If you cannot clone the repo to /srv, copy from your main directory to /srv. Check the ownership and make sure all of the main files are owned by the paraccel user and paraccel group
