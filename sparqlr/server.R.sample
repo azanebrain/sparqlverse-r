@@ -18,7 +18,7 @@ GROUP BY ?object ORDER BY desc(?total) ?object LIMIT ?:limit"
 shinyServer(function(input, output, session) {
 
 bootstrap <- function(){
-updateSelectInput(session, "endpoint", label = "Select Property To Query", choices = endpoints, selected = endpoint)
+updateSelectInput(session, "endpoint", label = "Select Endpoint To Query", choices = endpoints, selected = endpoint)
 graphs <- paste(SPARQL(endpoint, graphQuery)$results)
 updateSelectInput(session, "graph", label = "Select Graph To Query", choices = graphs, selected = "tickit")
 predicates <- paste(SPARQL(endpoint, predicateQuery)$results)

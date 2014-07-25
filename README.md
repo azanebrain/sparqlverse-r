@@ -32,7 +32,7 @@ On your VM go to port 3838/sparqlverse-r/<<your app>> . This opens the /srv/shin
 - Read any specific instructions in the local reamde
 - install shiny packages as sudo:
 ```
-sudo su -\ -c "R -e \"install.packages('<package name>', repos='http://cran.rstudio.com/')\"" &
+sudo su -c "R -e \"install.packages('<package name>', repos='http://cran.rstudio.com/')\"" &
 ```
 
 ### Running in /srv
