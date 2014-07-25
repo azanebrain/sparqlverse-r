@@ -1,0 +1,33 @@
+library(ggplot2)
+library(shiny)
+library(SPARQL)
+
+endpoint <- "http://ws-azane:8080/runQuery.html"
+
+# Define server logic
+shinyServer(function(input, output) {
+  
+  queryTemplate <-
+    "select?requestnum(sum(?size)as?size)(sum(?max)as?max)where{table'str_memory_recent'}group by?requestnum order by?requestnum"
+  query <-reactive({paste(queryTemplate)})
+  results <-reactive({SPARQL(endpoint, query())$results})
+  
+  output$avgAcresPerFirePlot <- renderPlot({
+    p <- ggplot(results(), aes(x=requestnum, y=size, group=1)) +
+      geom_point() +
+      stat_smooth() +
+      scale_x_continuous(breaks=seq(1, 2008, 5)) +
+      xlab("Year") +
+      ylab("Average acres burned per fire")
+    print(p)
+  }, width = "auto", height = 600)
+  
+  output$resultsTable <- renderDataTable({
+    results()
+  })
+  
+  output$SPARQLquery <- renderText({
+    query()
+  })
+
+})
