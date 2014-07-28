@@ -2,7 +2,7 @@ library(ggplot2)
 library(shiny)
 library(SPARQL)
 
-endpoint <- "http://ws-azane:8080/runQuery.html"
+endpoint <- "http://ws-akeen:8080/runQuery.html"
 
 # Define server logic
 shinyServer(function(input, output) {
@@ -13,7 +13,6 @@ shinyServer(function(input, output) {
     group by ?requestnum order by ?requestnum"
   query <-reactive({paste(queryTemplate)})
   
-                    
   results <-reactive({SPARQL(endpoint, query())$results})
   
   output$resultsPlot <- renderPlot({
@@ -24,7 +23,7 @@ shinyServer(function(input, output) {
       xlab("Request Num") +
       ylab("Size")
     print(p)
-  }, width = "auto", height = 600)
+  }, width = "auto", height = 400)
   
   output$resultsTable <- renderDataTable({
     results()
