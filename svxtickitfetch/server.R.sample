@@ -1,0 +1,39 @@
+library(ggplot2)
+library(igraph)
+library(shiny)
+library(SPARQL)
+
+
+endpoint <- "http://ws-akeen:8080"
+
+# Define server logic
+shinyServer(function(input, output) {
+  
+  queryTemplate <-
+    "SELECT ?p ?o
+    FROM <tickit>
+    WHERE {
+       <person2> ?p ?o}
+    ORDER BY desc(?p) ?o
+    LIMIT ?:limit"
+
+  #Set the query results to a variable and replace the LIMIT value with the slider input
+  query <-reactive({
+    temp <- gsub("\\?:limit", input$limit[1], queryTemplate)
+  })
+  results <-reactive({SPARQL(endpoint, query())$results})
+  ego <-reactive({graph.data.frame(results(), directed=F)})
+  
+  output$egoPlot <- renderPlot({
+    plot(ego())
+  }, width = "auto", height = 400)
+  
+  output$resultsTable <- renderDataTable({
+    results()
+  })
+  
+  output$SPARQLquery <- renderText({
+    query()
+  })
+
+})
