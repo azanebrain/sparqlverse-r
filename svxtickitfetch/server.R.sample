@@ -3,11 +3,18 @@ library(igraph)
 library(shiny)
 library(SPARQL)
 
-
 endpoint <- "http://ws-akeen:8080"
+playground <- "placeholder"
+playgrounds <- c( "one", "test", "two" )
 
 # Define server logic
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
+
+  bootstrap <- function(){
+    updateSelectInput(session, "playground", label="Select a playground example:", choices = playgrounds, selected = playground)
+   # updateSelectInput(session, "whereclause", label="Select a where clause:", choices = whereclauses, selected = whereclause)
+  }
+  isolate(bootstrap())
   
   queryTemplate <-
     "SELECT ?p ?o
@@ -23,7 +30,12 @@ shinyServer(function(input, output) {
   })
   results <-reactive({SPARQL(endpoint, query())$results})
   ego <-reactive({graph.data.frame(results(), directed=F)})
-  
+
+  playgroundType <-reactive({ 
+    # temp <- playground 
+    temp <- gsub("placeholder", input$playground[1], playground) 
+  })
+
   output$egoPlot <- renderPlot({
     plot(ego())
   }, width = "auto", height = 400)
@@ -34,6 +46,10 @@ shinyServer(function(input, output) {
   
   output$SPARQLquery <- renderText({
     query()
+  })
+
+  output$playgroundDisplay <- renderText({
+    playgroundType()
   })
 
 })

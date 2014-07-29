@@ -9,6 +9,14 @@ shinyUI(pageWithSidebar(
   # Slider to limit number of results returned
   sidebarPanel(
     wellPanel(
+      selectInput(
+        inputId = "playground",
+        "Loading playground examples...",
+        choices = c()
+        ),
+      # selectInput("whereclause", "Where clause",
+      #             choices = c()
+      #             ),
       sliderInput("limit",
                   "Set Your Range:",
                   min = 1,
@@ -24,7 +32,12 @@ shinyUI(pageWithSidebar(
       conditionalPanel("input.showQuery == true",
                       p(strong("SPARQL Query")),
                       textOutput("SPARQLquery")
-                     )),
+                     ),
+    p( 
+     textOutput("playgroundDisplay")
+    )
+
+    ),
 
   # Show the visualizations of the results
   mainPanel(
