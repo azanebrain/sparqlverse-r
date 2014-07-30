@@ -4,34 +4,37 @@ library(shiny)
 library(SPARQL)
 
 endpoint <- "http://ws-akeen:8080"
-whereclause <- "<person2> ?p ?o"
-whereclauses <- c("<person2> ?p ?o")
-defaultLimit <- 10
+playground <- "placeholder"
+playgrounds <- c( "one", "test", "two" )
 
 # Define server logic
 shinyServer(function(input, output, session) {
 
   bootstrap <- function(){
-   updateSelectInput(session, "whereclause", label="Select a WHERE clause:", choices = whereclauses, selected = whereclause)
-   # updateSliderInput(session, "limit", value = defaultLimit)
+    updateSelectInput(session, "playground", label="Select a playground example:", choices = playgrounds, selected = playground)
+   # updateSelectInput(session, "whereclause", label="Select a where clause:", choices = whereclauses, selected = whereclause)
   }
   isolate(bootstrap())
   
   queryTemplate <-
     "SELECT ?p ?o
     FROM <tickit>
-    WHERE { ?:whereclause }
+    WHERE {
+       <person2> ?p ?o}
     ORDER BY desc(?p) ?o
     LIMIT ?:limit"
 
   #Set the query results to a variable and replace the LIMIT value with the slider input
-  query <-reactive({ 
-                    temp <- 
-                            gsub("\\?:whereclause", input$whereclause[1], queryTemplate) 
-                            gsub("\\?:limit", input$limit[1], temp) 
-                   })
+  query <-reactive({
+    temp <- gsub("\\?:limit", input$limit[1], queryTemplate)
+  })
   results <-reactive({SPARQL(endpoint, query())$results})
   ego <-reactive({graph.data.frame(results(), directed=F)})
+
+  playgroundType <-reactive({ 
+    # temp <- playground 
+    temp <- gsub("placeholder", input$playground[1], playground) 
+  })
 
   output$egoPlot <- renderPlot({
     plot(ego())
@@ -43,6 +46,10 @@ shinyServer(function(input, output, session) {
   
   output$SPARQLquery <- renderText({
     query()
+  })
+
+  output$playgroundDisplay <- renderText({
+    playgroundType()
   })
 
 })

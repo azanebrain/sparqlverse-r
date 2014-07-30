@@ -1,7 +1,3 @@
 # Explanation
 
-This shows the SVX Tickit examples in Shiny
-
-## Goals
-
-Utilize the actual .rqx files to pull in live queries
+This shows the SVX Tickit Fetch playground example in Shiny

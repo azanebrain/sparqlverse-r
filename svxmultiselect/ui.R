@@ -10,10 +10,16 @@ shinyUI(pageWithSidebar(
   sidebarPanel(
     wellPanel(
       selectInput(
-                  inputId = "whereclause",
-                  "Loading WHERE clause examples...",
-                  choices = c()
-                  ),
+        inputId = "playground",
+        "Loading playground examples...",
+        choices = c(
+          "I am choice one",
+          "second choice"
+        )
+        ),
+      # selectInput("whereclause", "Where clause",
+      #             choices = c()
+      #             ),
       sliderInput("limit",
                   "Set Your Range:",
                   min = 1,
@@ -25,12 +31,15 @@ shinyUI(pageWithSidebar(
       ),
       checkboxInput(inputId = "showQuery",
                      label = "Show Query",
-                     value = FALSE
-                     ),
+                     value = FALSE),
       conditionalPanel("input.showQuery == true",
                       p(strong("SPARQL Query")),
                       textOutput("SPARQLquery")
-                     )
+                     ),
+    p( 
+     textOutput("playgroundDisplay")
+    )
+
     ),
 
   # Show the visualizations of the results
