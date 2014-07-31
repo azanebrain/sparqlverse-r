@@ -5,7 +5,7 @@ library(SPARQL)
 
 endpoint <- "http://ws-akeen:8080"
 whereclause <- "<person2> ?p ?o"
-whereclauses <- c("<person2> ?p ?o")
+whereclauses <- c(whereclause)
 defaultLimit <- 10
 
 # Define server logic
