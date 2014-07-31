@@ -1,0 +1,56 @@
+library(ggplot2)
+library(igraph)
+library(shiny)
+library(SPARQL)
+
+endpoint <- "http://ws-akeen:8080"
+whereclause <- "?eventid <venueid> ?venueid .
+      ?venueid <venuename> ?location .
+        ?eventid <catid> ?catid .
+          ?catid <catname> ?category .
+            ?eventid <dateid> ?dateid .
+              ?dateid <caldate> ?date .
+"
+whereclauses <- c(
+  whereclause
+  )
+defaultLimit <- 100
+
+# Define server logic
+shinyServer(function(input, output, session) {
+
+  bootstrap <- function(){
+   updateSelectInput(session, "whereclause", label="Select a WHERE clause:", choices = whereclauses, selected = whereclause)
+   updateSliderInput(session, "limit", value = defaultLimit)
+  }
+  isolate(bootstrap())
+  
+  queryTemplate <-
+"SELECT ?eventname ?location ?category ?date
+FROM <tickit>
+WHERE { ?:whereclause } 
+ORDER BY ?date ?eventname ?location ?category LIMIT ?:limit
+"
+
+  #Set the query results to a variable and replace the LIMIT value with the slider input
+  query <-reactive({ 
+                    temp <- 
+                            gsub("\\?:whereclause", input$whereclause[1], queryTemplate) 
+                            gsub("\\?:limit", input$limit[1], temp) 
+                   })
+  results <-reactive({SPARQL(endpoint, query())$results})
+  ego <-reactive({graph.data.frame(results(), directed=F)})
+
+  output$egoPlot <- renderPlot({
+    plot(ego())
+  }, width = "auto", height = 400)
+  
+  output$resultsTable <- renderDataTable({
+    results()
+  })
+  
+  output$SPARQLquery <- renderText({
+    query()
+  })
+
+})
