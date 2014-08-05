@@ -1,0 +1,6 @@
+?eventid <venueid> ?venueid .
+?venueid <venuename> ?location .
+?eventid <catid> ?catid .
+?catid <catname> ?category .
+?eventid <dateid> ?dateid .
+?dateid <caldate> ?date .
