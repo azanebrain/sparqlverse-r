@@ -1,5 +1,6 @@
 .DS_Store
 thumbs.db
+*.swp
 
 node_modules
 npm_debug.log
