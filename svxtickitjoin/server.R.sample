@@ -3,14 +3,8 @@ library(igraph)
 library(shiny)
 library(SPARQL)
 
-endpoint <- "http://ws-akeen:8080"
-whereclause <- "?eventid <venueid> ?venueid .
-      ?venueid <venuename> ?location .
-        ?eventid <catid> ?catid .
-          ?catid <catname> ?category .
-            ?eventid <dateid> ?dateid .
-              ?dateid <caldate> ?date .
-"
+endpoint <- "http://ws-akeen:8080/runQuery.html"
+whereclause <- includeText('./tickitjoin.rqx')
 whereclauses <- c(
   whereclause
   )
