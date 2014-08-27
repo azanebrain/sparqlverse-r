@@ -3,18 +3,28 @@ library(igraph)
 library(shiny)
 library(SPARQL)
 
-endpoint <- "http://ws-akeen:8080/runQuery.html"
-whereclause <- includeText('./tickitjoin.rqx')
+endpoint <- "http://ws-akeen:8080/"
+# this method does not work with updateSlectInput()'s label feature
+#  whereclause <- includeText('./tickitjoin.rqx')
+joining <- "
+?eventid <venueid> ?venueid .
+?venueid <venuename> ?location .
+?eventid <catid> ?catid .
+?catid <catname> ?category .
+?eventid <dateid> ?dateid .
+?dateid <caldate> ?date .
+"
+
 whereclauses <- c(
-  whereclause
+  "Joining" = joining
   )
-defaultLimit <- 100
+defaultLimit <- 50
 
 # Define server logic
 shinyServer(function(input, output, session) {
 
   bootstrap <- function(){
-   updateSelectInput(session, "whereclause", label="Select a WHERE clause:", choices = whereclauses, selected = whereclause)
+   updateSelectInput(session, "whereclause", label="Select a WHERE clause:", choices = whereclauses, selected = joining)
    updateSliderInput(session, "limit", value = defaultLimit)
   }
   isolate(bootstrap())
