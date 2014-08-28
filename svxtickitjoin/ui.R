@@ -30,7 +30,9 @@ shinyUI(pageWithSidebar(
       conditionalPanel("input.showQuery == true",
                       p(strong("SPARQL Query")),
                       textOutput("SPARQLquery")
-                     )
+                     ),
+   
+      p(textOutput("options"))
     ),
 
   # Show the visualizations of the results
