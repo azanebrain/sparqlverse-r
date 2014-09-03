@@ -7,7 +7,11 @@ shinyUI(fluidPage(
     sidebarPanel(
       selectInput( inputId = "input_type",
         "Loading input types...",
-        choices = c("slider","text")
+        choices = c(
+          "slider",
+          "text",
+          "Joining"
+        )
       ),
       uiOutput("limit"),
       #checkboxInput(inputID = "showQuery",

@@ -7,6 +7,7 @@ shinyUI(pageWithSidebar(
   headerPanel("SVX Playground - Tickit Join"),
 
   # Slider to limit number of results returned
+  # The sidebarPanel() function has been deprecated. fluiPage should be used in conjunction with sidebarLayout() instead.
   sidebarPanel(
     wellPanel(
       selectInput(
