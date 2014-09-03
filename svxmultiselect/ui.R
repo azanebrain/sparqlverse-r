@@ -1,51 +1,33 @@
+# libraries
 library(shiny)
 
-# Define UI for most popular states
-shinyUI(pageWithSidebar(
-
-  # Application title
-  headerPanel("SVX Playground - Tickit Fetch"),
-
-  # Slider to limit number of results returned
-  sidebarPanel(
-    wellPanel(
-      selectInput(
-        inputId = "playground",
-        "Loading playground examples...",
-        choices = c(
-          "I am choice one",
-          "second choice"
-        )
-        ),
-      # selectInput("whereclause", "Where clause",
-      #             choices = c()
-      #             ),
-      sliderInput("limit",
-                  "Set Your Range:",
-                  min = 1,
-                  max = 100,
-                  step = 1,
-                  value = c(10),
-                  animate=TRUE
-                  )
+shinyUI(fluidPage(
+  titlePanel("SVX Multiselect"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput( inputId = "input_type",
+        "Loading input types...",
+        choices = c("slider","text")
       ),
-      checkboxInput(inputId = "showQuery",
-                     label = "Show Query",
-                     value = FALSE),
-      conditionalPanel("input.showQuery == true",
-                      p(strong("SPARQL Query")),
-                      textOutput("SPARQLquery")
-                     ),
-    p( 
-     textOutput("playgroundDisplay")
-    )
-
+      uiOutput("limit"),
+      #checkboxInput(inputID = "showQuery",
+      #  label = "Show Query",
+      #  value = FALSE
+      #),
+      #conditionalPanel("input.showQuery == true",
+      #  p(strong("SPARQL Query")),
+      #  textOutput("SPARQLquery")
+      #)
+      textOutput("SPARQLquery")
     ),
+    mainPanel(
+      # output the dynamic UI componenet
+      uiOutput("ui"),
+      tags$p("Input type:"),
+      verbatimTextOutput("input_type_text"),
+      tags$p("Dynamic input value:"),
+      verbatimTextOutput("dynamic_value")
 
-  # Show the visualizations of the results
-  mainPanel(
-    tabsetPanel(
-      tabPanel("EgoPlot", plotOutput("egoPlot")),
-      tabPanel("Table", dataTableOutput("resultsTable"))
     )
-  )))
+  )
+))
