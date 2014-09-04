@@ -1,0 +1,113 @@
+# libraries
+library(ggplot2)
+library(igraph)
+library(shiny)
+library(SPARQL)
+
+# vars
+
+shinyServer(function(input,output) {
+  # Does this function need 'session' like in svxtickitjoin ?
+
+  queryTemplate <- "SELECT ?eventname LIMIT ?:limit"
+  # queryTemplate <- "SELECT ?eventname LIMIT none"
+# how to get each indivdual component to modify the entire query template, but only leave pieces editable?
+
+  # The query templates for each example
+  queryTemplateSlider <- "SELECT ?eventname LIMIT ?:limit" 
+  queryTemplateText <- "SELECT ?:eventname WHERE ?:where LIMIT ?limit" 
+  queryTemplateJoin <- 
+  "SELECT ?p ?o
+  FROM <tickit>
+  WHERE { <person2> ?p ?o}
+  ORDER BY desc(?p) ?o 
+  LIMIT ?:limit
+  "
+  queryTemplateFetch <-
+  "SELECT ?eventname ?location ?category ?date
+  FROM <tickit>
+  WHERE { 
+    ?eventid <venueid> ?venueid .
+    ?venueid <venuename> ?location .
+    ?eventid <catid> ?catid .
+    ?catid <catname> ?category .
+    ?eventid <dateid> ?dateid .
+    ?dateid <caldate> ?date .
+    ?eventid <eventname> ?eventname .
+  } 
+  ORDER BY ?date ?eventname ?location ?category 
+  LIMIT ?:limit
+  "
+
+  # Modify the query statement depending on each unique interface
+  # Each interface has different configurable values that must be modified in 
+  # the query that is being sent to SVX
+  query <- reactive({
+    if (is.null(input$input_type)) {
+      return(NULL)
+    }
+    else if (input$input_type == "Joining" ) {
+        gsub("\\?:limit", input$limit[1], queryTemplateJoin)
+    } 
+    else if (input$input_type == "slider" ) {
+        gsub("\\?:limit", input$sliderlimit[1], queryTemplateSlider)
+    } 
+    else if (input$input_type == "text" ) {
+        temp <- sub("\\?:where", "the where clause has changed", queryTemplateText)
+        sub("\\?:eventname", "the event name has changed", temp)
+
+    }
+  })
+
+  output$ui <- renderUI({
+
+    if (is.null(input$input_type)) {
+      return()
+    }
+
+    switch(input$input_type,
+      "slider" = sliderInput("dynamic", "Dynamic",
+        min = 1, max = 20, value = 10),
+      "text" = textInput("dynamic", "Dynamic",
+        value = "starting value")
+    )
+  })
+
+  output$limit <- renderUI({
+    if (is.null(input$input_type)) {
+      return()
+    }
+    switch(input$input_type,
+      "slider" = sliderInput("sliderlimit",
+        "Set the range:",
+        min = 1,
+        max = 500,
+        step = 1,
+        value = 10,
+        animate = TRUE
+      ),
+      #"slider" = textInput("slider-text", "TEST", value="where clause"),
+      "Joining" = sliderInput("limit",
+        "Set the range:",
+        min = 1,
+        max = 100,
+        step = 10,
+        value = 50
+      )
+    )
+  })
+
+  output$input_type_text <- renderText({
+    input$input_type
+  })
+     
+  output$dynamic_value <- renderPrint({
+    str(input$dynamic)
+  })
+
+  output$SPARQLquery <- renderText({
+   query()
+  })
+
+})
+
