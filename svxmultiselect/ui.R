@@ -14,15 +14,11 @@ shinyUI(fluidPage(
         )
       ),
       uiOutput("limit"),
-      #checkboxInput(inputID = "showQuery",
-      #  label = "Show Query",
-      #  value = FALSE
-      #),
-      #conditionalPanel("input.showQuery == true",
-      #  p(strong("SPARQL Query")),
-      #  textOutput("SPARQLquery")
-      #)
-      textOutput("SPARQLquery")
+      checkboxInput("showquery", "Show Query"),
+      conditionalPanel("input.showquery == true",
+        p(strong("SPARQL Query")),
+        textOutput("SPARQLquery")
+      )
     ),
     mainPanel(
       # output the dynamic UI componenet
