@@ -5,29 +5,24 @@ library(shiny)
 library(SPARQL)
 
 # vars
+endpoint <- "http://ws-azane:8080/"
 
-shinyServer(function(input,output) {
-  # Does this function need 'session' like in svxtickitjoin ?
-
-  queryTemplate <- "SELECT ?eventname LIMIT ?:limit"
-  # queryTemplate <- "SELECT ?eventname LIMIT none"
-# how to get each indivdual component to modify the entire query template, but only leave pieces editable?
-
-  # The query templates for each example
-  queryTemplateSlider <- "SELECT ?eventname LIMIT ?:limit" 
-  queryTemplateText <- "SELECT ?:eventname WHERE ?:where LIMIT ?limit" 
-  queryTemplateJoin <- 
+# The query templates for each example
+queryTemplateSlider <- "SELECT ?eventname LIMIT ?:limit" 
+queryTemplateText <- "SELECT ?:eventname WHERE ?:where LIMIT ?limit" 
+queryTemplateJoin <- 
   "SELECT ?p ?o
   FROM <tickit>
   WHERE { <person2> ?p ?o}
   ORDER BY desc(?p) ?o 
   LIMIT ?:limit
   "
-  queryTemplateFetch <-
+
+queryTemplateFetch <-
   "SELECT ?eventname ?location ?category ?date
   FROM <tickit>
   WHERE { 
-    ?eventid <venueid> ?venueid .
+   ?eventid <venueid> ?venueid .
     ?venueid <venuename> ?location .
     ?eventid <catid> ?catid .
     ?catid <catname> ?category .
@@ -38,6 +33,9 @@ shinyServer(function(input,output) {
   ORDER BY ?date ?eventname ?location ?category 
   LIMIT ?:limit
   "
+
+shinyServer(function(input,output) {
+  # Does this function need 'session' like in svxtickitjoin ?
 
   # Modify the query statement depending on each unique interface
   # Each interface has different configurable values that must be modified in 
@@ -59,6 +57,8 @@ shinyServer(function(input,output) {
     }
   })
 
+
+  # Demo component:
   output$ui <- renderUI({
 
     if (is.null(input$input_type)) {
@@ -73,6 +73,8 @@ shinyServer(function(input,output) {
     )
   })
 
+
+  # The limit component
   output$limit <- renderUI({
     if (is.null(input$input_type)) {
       return()
@@ -97,14 +99,17 @@ shinyServer(function(input,output) {
     )
   })
 
+  # Demo
   output$input_type_text <- renderText({
     input$input_type
   })
      
+  # Demo
   output$dynamic_value <- renderPrint({
     str(input$dynamic)
   })
 
+  # The query (in text format) being sent to SVX
   output$SPARQLquery <- renderText({
    query()
   })
