@@ -8,11 +8,13 @@ shinyUI(fluidPage(
       selectInput( inputId = "input_type",
         "Loading input types...",
         choices = c(
+          "Fetching",
+          "Joining",
           "slider",
-          "text",
-          "Joining"
+          "text"
         )
       ),
+      uiOutput("whereclause"),
       uiOutput("limit"),
       checkboxInput("showquery", "Show Query"),
       conditionalPanel("input.showquery == true",
@@ -22,12 +24,18 @@ shinyUI(fluidPage(
     ),
     mainPanel(
       # output the dynamic UI componenet
-      uiOutput("ui"),
-      tags$p("Input type:"),
-      verbatimTextOutput("input_type_text"),
-      tags$p("Dynamic input value:"),
-      verbatimTextOutput("dynamic_value")
-
+      tabsetPanel(
+        tabPanel("Dynamic UI",
+          uiOutput("ui"),
+          tags$p("Input type:"),
+          verbatimTextOutput("input_type_text"),
+          tags$p("Dynamic input value:"),
+          verbatimTextOutput("dynamic_value")
+        ),
+        tabPanel("Table",
+          dataTableOutput("resultsTable")
+        )
+      )
     )
   )
 ))

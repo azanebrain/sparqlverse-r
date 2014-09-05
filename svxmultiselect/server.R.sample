@@ -13,7 +13,7 @@ queryTemplateText <- "SELECT ?:eventname WHERE ?:where LIMIT ?limit"
 queryTemplateJoin <- 
   "SELECT ?p ?o
   FROM <tickit>
-  WHERE { <person2> ?p ?o}
+  WHERE { ?:whereclause }
   ORDER BY desc(?p) ?o 
   LIMIT ?:limit
   "
@@ -44,11 +44,15 @@ shinyServer(function(input,output) {
     if (is.null(input$input_type)) {
       return(NULL)
     }
+    else if (input$input_type == "Fetching" ) {
+        temp <- sub("\\?:limit", input$limit[1], queryTemplateFetch)
+    } 
     else if (input$input_type == "Joining" ) {
-        gsub("\\?:limit", input$limit[1], queryTemplateJoin)
+        temp <- sub("\\?:whereclause", input$whereclause, queryTemplateJoin)
+        sub("\\?:limit", input$limit[1], temp)
     } 
     else if (input$input_type == "slider" ) {
-        gsub("\\?:limit", input$sliderlimit[1], queryTemplateSlider)
+        sub("\\?:limit", input$sliderlimit[1], queryTemplateSlider)
     } 
     else if (input$input_type == "text" ) {
         temp <- sub("\\?:where", "the where clause has changed", queryTemplateText)
@@ -57,15 +61,18 @@ shinyServer(function(input,output) {
     }
   })
 
+  results <-reactive({SPARQL(endpoint, query())$results})
+  ego <-reactive({graph.data.frame(results(), directed=F)})
 
   # Demo component:
   output$ui <- renderUI({
-
     if (is.null(input$input_type)) {
       return()
     }
-
     switch(input$input_type,
+      "Fetching" = plotOutput("egoPlot"),
+      "Joining" = plotOutput("egoPlot"),
+      # Demo
       "slider" = sliderInput("dynamic", "Dynamic",
         min = 1, max = 20, value = 10),
       "text" = textInput("dynamic", "Dynamic",
@@ -80,7 +87,7 @@ shinyServer(function(input,output) {
       return()
     }
     switch(input$input_type,
-      "slider" = sliderInput("sliderlimit",
+      "Fetching" = sliderInput("limit",
         "Set the range:",
         min = 1,
         max = 500,
@@ -88,14 +95,31 @@ shinyServer(function(input,output) {
         value = 10,
         animate = TRUE
       ),
-      #"slider" = textInput("slider-text", "TEST", value="where clause"),
       "Joining" = sliderInput("limit",
         "Set the range:",
         min = 1,
         max = 100,
         step = 10,
         value = 50
+      ),
+      "slider" = sliderInput("sliderlimit",
+        "Set the range:",
+        min = 1,
+        max = 500,
+        step = 1,
+        value = 10,
+        animate = TRUE
       )
+    )
+  })
+
+  # The where clause component
+  output$whereclause <- renderUI({
+    if (is.null(input$input_type)) {
+      return()
+    }
+    switch(input$input_type,
+      "Joining" = textInput("whereclause", "Enter the WHERE clause:", "<person2> ?p ?o")
     )
   })
 
@@ -107,6 +131,16 @@ shinyServer(function(input,output) {
   # Demo
   output$dynamic_value <- renderPrint({
     str(input$dynamic)
+  })
+
+  # Ego Plot
+  output$egoPlot <- renderPlot({
+    plot(ego())
+  }, width="auto", height=400 )
+
+  # Table
+  output$resultsTable <- renderDataTable({
+    results()
   })
 
   # The query (in text format) being sent to SVX
