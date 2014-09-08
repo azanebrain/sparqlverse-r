@@ -10,12 +10,14 @@ shinyUI(fluidPage(
         choices = c(
           "Fetching",
           "Joining",
+          "CPU Usage",
           "slider",
           "text"
         )
       ),
       uiOutput("whereclause"),
       uiOutput("limit"),
+      uiOutput("yaxis"),
       checkboxInput("showquery", "Show Query"),
       conditionalPanel("input.showquery == true",
         p(strong("SPARQL Query")),
@@ -28,9 +30,7 @@ shinyUI(fluidPage(
         tabPanel("Dynamic UI",
           uiOutput("ui"),
           tags$p("Input type:"),
-          verbatimTextOutput("input_type_text"),
-          tags$p("Dynamic input value:"),
-          verbatimTextOutput("dynamic_value")
+          verbatimTextOutput("input_type_text")
         ),
         tabPanel("Table",
           dataTableOutput("resultsTable")

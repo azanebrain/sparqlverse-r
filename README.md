@@ -113,6 +113,11 @@ Make sure everyting is installed
 - Test rstudio with `rstudio-server`
 - Test Shiny Server with `shiny-server`
 
+## Packages
+
+The full package list can be found here: [http://cran.r-project.org/web/packages/available_packages_by_name.html](http://cran.r-project.org/web/packages/available_packages_by_name.html)
+
+
 ### Intall the SPARQL package
 Once you are logged into the rstudio server you will need to install the SPARQL packages
 
@@ -162,8 +167,7 @@ OS X mountain Lion requires XQuartz.
 
 - Go to the packages panel, select 'install packages', search for igraph and install with dependencies
 
-## Apps
+# Apps
 
-### shinyapp
+Each subfolder of this project is a unique Shiny application. Each will have a readme file explaining unique capabilities and requirements for the app
 
-### shinyappsv

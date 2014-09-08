@@ -5,7 +5,7 @@ library(shiny)
 library(SPARQL)
 
 # vars
-endpoint <- "http://ws-azane:8080/"
+endpoint <- "http://ws-akeen:8080/"
 
 # The query templates for each example
 queryTemplateSlider <- "SELECT ?eventname LIMIT ?:limit" 
@@ -34,6 +34,17 @@ queryTemplateFetch <-
   LIMIT ?:limit
   "
 
+queryTemplateCPUUsage<-
+  "select 
+    ?requestnum( sum(?idle)as?idle ) 
+    (sum(?utime)as?user) 
+    (sum(?stime)as?sys) 
+    (sum(?iowait)as?iowait) 
+  where { table 'str_core_recent' } 
+  group by ?requestnum 
+  order by ?requestnum
+  "
+
 shinyServer(function(input,output) {
   # Does this function need 'session' like in svxtickitjoin ?
 
@@ -51,18 +62,34 @@ shinyServer(function(input,output) {
         temp <- sub("\\?:whereclause", input$whereclause, queryTemplateJoin)
         sub("\\?:limit", input$limit[1], temp)
     } 
+    else if (input$input_type == "CPU Usage" ) {
+        # sub("\\?:limit", input$sliderlimit[1], queryTemplateCPUUsage)
+        queryTemplateCPUUsage
+    }
+    # Demo
     else if (input$input_type == "slider" ) {
         sub("\\?:limit", input$sliderlimit[1], queryTemplateSlider)
     } 
     else if (input$input_type == "text" ) {
         temp <- sub("\\?:where", "the where clause has changed", queryTemplateText)
         sub("\\?:eventname", "the event name has changed", temp)
-
     }
   })
 
   results <-reactive({SPARQL(endpoint, query())$results})
+  # Ego Graph used for plots
   ego <-reactive({graph.data.frame(results(), directed=F)})
+
+  # CPU Usage Y Axis
+  cpuyaxis <- reactive({
+    #"user"
+   if (is.null(input$input_type)) {
+     return(NULL)
+   }
+   else {
+     input$yaxis
+   }
+  })
 
   # Demo component:
   output$ui <- renderUI({
@@ -72,6 +99,7 @@ shinyServer(function(input,output) {
     switch(input$input_type,
       "Fetching" = plotOutput("egoPlot"),
       "Joining" = plotOutput("egoPlot"),
+      "CPU Usage" = plotOutput("cpuUsageLine"),
       # Demo
       "slider" = sliderInput("dynamic", "Dynamic",
         min = 1, max = 20, value = 10),
@@ -123,6 +151,24 @@ shinyServer(function(input,output) {
     )
   })
 
+  # Y axis
+  output$yaxis <- renderUI({
+    if (is.null(input$input_type)) {
+      return()
+    }
+    switch(input$input_type,
+      "CPU Usage" = selectInput("yaxis",
+      "Select the Y Axis:",
+      choices = c(
+        "user",
+        "idle",
+        "sys",
+        "iowait"
+        )
+      )
+    )
+  })
+
   # Demo
   output$input_type_text <- renderText({
     input$input_type
@@ -138,6 +184,28 @@ shinyServer(function(input,output) {
     plot(ego())
   }, width="auto", height=400 )
 
+  # Line chart
+  output$cpuUsageLine <- renderPlot({
+     #p <- ggplot(results(), aes(x=requestnum, y=cpuyaxis(), group=1)) +
+     #p <- ggplot(results(), aes(x, y)) +
+     #p <- ggplot(results()) +
+     #p <- ggplot(results(), aes(x=requestnum, y=user, group=1)) +
+     p <- ggplot(results()) +
+       #geom_point() +
+       geom_point( aes(x=requestnum, y=user, group=1) , colour = 'blue') +
+       geom_point( aes(x=requestnum, y=sys, group=1) , colour = 'red') +
+       geom_point( aes(x=requestnum, y=idle, group=1) , colour = 'yellow') +
+       geom_point( aes(x=requestnum, y=iowait, group=1) , colour = 'green') +
+       #stat_smooth() +
+       xlab("X Label") +
+       ylab("Y Label")
+       print(p)
+  }, width = "auto", height = 400)
+
+  output$cpuUsageLine2 <- renderPlot({
+    #qplot(requestnum, user, data=results())
+    qplot(requestnum, cpuyaxis(), data=results())
+  })
   # Table
   output$resultsTable <- renderDataTable({
     results()
