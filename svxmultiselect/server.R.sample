@@ -62,7 +62,7 @@ shinyServer(function(input,output) {
         temp <- sub("\\?:whereclause", input$whereclause, queryTemplateJoin)
         sub("\\?:limit", input$limit[1], temp)
     } 
-    else if (input$input_type == "CPU Usage" ) {
+    else if (input$input_type == "Performance" ) {
         # sub("\\?:limit", input$sliderlimit[1], queryTemplateCPUUsage)
         queryTemplateCPUUsage
     }
@@ -80,14 +80,14 @@ shinyServer(function(input,output) {
   # Ego Graph used for plots
   ego <-reactive({graph.data.frame(results(), directed=F)})
 
-  # CPU Usage Y Axis
-  cpuyaxis <- reactive({
+  # Performance Metrics
+  perfmetric <- reactive({
     #"user"
    if (is.null(input$input_type)) {
      return(NULL)
    }
    else {
-     input$yaxis
+     input$metric
    }
   })
 
@@ -99,7 +99,7 @@ shinyServer(function(input,output) {
     switch(input$input_type,
       "Fetching" = plotOutput("egoPlot"),
       "Joining" = plotOutput("egoPlot"),
-      "CPU Usage" = plotOutput("cpuUsageLine"),
+      "Performance" = plotOutput("cpuUsageLine"),
       # Demo
       "slider" = sliderInput("dynamic", "Dynamic",
         min = 1, max = 20, value = 10),
@@ -151,19 +151,18 @@ shinyServer(function(input,output) {
     )
   })
 
-  # Y axis
-  output$yaxis <- renderUI({
+  # Metric
+  output$metric <- renderUI({
     if (is.null(input$input_type)) {
       return()
     }
     switch(input$input_type,
-      "CPU Usage" = selectInput("yaxis",
-      "Select the Y Axis:",
+      "Performance" = selectInput("metric",
+      "Select the metric:",
       choices = c(
-        "user",
-        "idle",
-        "sys",
-        "iowait"
+        "CPU Usage",
+        "Memory",
+        "Communications"
         )
       )
     )
@@ -185,27 +184,20 @@ shinyServer(function(input,output) {
   }, width="auto", height=400 )
 
   # Line chart
+  # Currently only doing the CPU Usage. Need to figure out how to get the performance metric, and regerenate the appropriate line graph
   output$cpuUsageLine <- renderPlot({
-     #p <- ggplot(results(), aes(x=requestnum, y=cpuyaxis(), group=1)) +
-     #p <- ggplot(results(), aes(x, y)) +
-     #p <- ggplot(results()) +
-     #p <- ggplot(results(), aes(x=requestnum, y=user, group=1)) +
-     p <- ggplot(results()) +
-       #geom_point() +
-       geom_point( aes(x=requestnum, y=user, group=1) , colour = 'blue') +
-       geom_point( aes(x=requestnum, y=sys, group=1) , colour = 'red') +
-       geom_point( aes(x=requestnum, y=idle, group=1) , colour = 'yellow') +
-       geom_point( aes(x=requestnum, y=iowait, group=1) , colour = 'green') +
-       #stat_smooth() +
-       xlab("X Label") +
-       ylab("Y Label")
-       print(p)
-  }, width = "auto", height = 400)
+    ggplot( data=results() , aes(x=requestnum) ) + 
+      # Create each line. Unfortunately the labels are titled 'colour'
+      geom_line( aes(y=user , colour = 'user')) +
+      geom_line( aes(y=sys, colour='sys')) +
+      geom_line( aes(y=idle , colour = 'idle')) +
+      geom_line(aes(y=iowait, colour='iowait'))  +
+      scale_colour_manual(values=c("red","orange","blue","green")) + # The colors match the SVX GUI
+      labs(colour="Metrics:") + 
+      xlab("Request Number") +
+      ylab("")
+  }, width = "auto", height = 400 )
 
-  output$cpuUsageLine2 <- renderPlot({
-    #qplot(requestnum, user, data=results())
-    qplot(requestnum, cpuyaxis(), data=results())
-  })
   # Table
   output$resultsTable <- renderDataTable({
     results()
@@ -217,4 +209,3 @@ shinyServer(function(input,output) {
   })
 
 })
-

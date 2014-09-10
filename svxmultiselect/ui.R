@@ -8,16 +8,16 @@ shinyUI(fluidPage(
       selectInput( inputId = "input_type",
         "Loading input types...",
         choices = c(
+          "Performance",
           "Fetching",
           "Joining",
-          "CPU Usage",
           "slider",
           "text"
         )
       ),
       uiOutput("whereclause"),
       uiOutput("limit"),
-      uiOutput("yaxis"),
+      uiOutput("metric"),
       checkboxInput("showquery", "Show Query"),
       conditionalPanel("input.showquery == true",
         p(strong("SPARQL Query")),
