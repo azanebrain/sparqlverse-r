@@ -162,7 +162,7 @@ shinyServer(function(input,output) {
       ),
       "Joining" = sliderInput("limit",
         "Set the range:",
-        min = 1,
+        min = 10,
         max = 100,
         step = 10,
         value = 50
