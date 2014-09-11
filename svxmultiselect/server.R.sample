@@ -44,6 +44,21 @@ queryTemplateCPUUsage<-
   group by ?requestnum 
   order by ?requestnum
   "
+queryTemplateMemory<-
+  "select
+    ?requestnum(sum(?size)as?size)(sum(?max)as?max)
+  where{table'str_memory_recent'}
+  group by?requestnum 
+  order by?requestnum
+  "
+queryTemplateCommunications<-
+  "select
+    ?requestnum (sum(?bytes) as ?bytes) 
+  where { table 'str_network_recent' } 
+  group by ?requestnum 
+  order by ?requestnum
+  "
+
 
 shinyServer(function(input,output) {
   # Does this function need 'session' like in svxtickitjoin ?
@@ -63,8 +78,18 @@ shinyServer(function(input,output) {
         sub("\\?:limit", input$limit[1], temp)
     } 
     else if (input$input_type == "Performance" ) {
-        # sub("\\?:limit", input$sliderlimit[1], queryTemplateCPUUsage)
-        queryTemplateCPUUsage
+        # If the user has selected the Performance graphs, figure out which metric the user wants to focus on
+        if ( is.null(input$perfmetric) ) {
+          queryTemplateCPUUsage
+        }
+        else if ( input$perfmetric == "Memory" ){
+          queryTemplateMemory
+        }
+        else if ( input$perfmetric == "Communications" ) {
+          queryTemplateCommunications
+        } else {
+          queryTemplateCPUUsage
+        }
     }
     # Demo
     else if (input$input_type == "slider" ) {
@@ -91,21 +116,33 @@ shinyServer(function(input,output) {
    }
   })
 
-  # Demo component:
+  # Render the main visualization
   output$ui <- renderUI({
+    # Go through the inputs that will change the graph
     if (is.null(input$input_type)) {
+      # If the user hasn't selected anything yet, return nothing
       return()
     }
-    switch(input$input_type,
-      "Fetching" = plotOutput("egoPlot"),
-      "Joining" = plotOutput("egoPlot"),
-      "Performance" = plotOutput("cpuUsageLine"),
-      # Demo
-      "slider" = sliderInput("dynamic", "Dynamic",
-        min = 1, max = 20, value = 10),
-      "text" = textInput("dynamic", "Dynamic",
-        value = "starting value")
-    )
+    # If the user has selected a Performance Metric
+    else if ( input$input_type == "Performance" && ! is.null(input$perfmetric) ) {
+      switch(input$perfmetric,
+        "CPU Usage" = plotOutput("cpuUsageLine"),
+        "Memory" = plotOutput("memoryLine"),
+        "Communications" = plotOutput("commLine")
+      )
+    }
+    else {
+      switch(input$input_type,
+        "Fetching" = plotOutput("egoPlot"),
+        "Joining" = plotOutput("egoPlot"),
+        "Performance" = plotOutput("cpuUsageLine"),
+        # Demo
+        "slider" = sliderInput("dynamic", "Dynamic",
+          min = 1, max = 20, value = 10),
+        "text" = textInput("dynamic", "Dynamic",
+          value = "starting value")
+      )
+    }
   })
 
 
@@ -152,12 +189,12 @@ shinyServer(function(input,output) {
   })
 
   # Metric
-  output$metric <- renderUI({
+  output$perfmetric <- renderUI({
     if (is.null(input$input_type)) {
       return()
     }
     switch(input$input_type,
-      "Performance" = selectInput("metric",
+      "Performance" = selectInput("perfmetric",
       "Select the metric:",
       choices = c(
         "CPU Usage",
@@ -193,6 +230,27 @@ shinyServer(function(input,output) {
       geom_line( aes(y=idle , colour = 'idle')) +
       geom_line(aes(y=iowait, colour='iowait'))  +
       scale_colour_manual(values=c("red","orange","blue","green")) + # The colors match the SVX GUI
+      labs(colour="Metrics:") + 
+      xlab("Request Number") +
+      ylab("")
+  }, width = "auto", height = 400 )
+
+  # Figuring out how to work on the other ones
+  output$memoryLine <- renderPlot({
+    ggplot( data=results() , aes(x=requestnum) ) + 
+      # Create each line. Unfortunately the labels are titled 'colour'
+      geom_line( aes(y=size , colour = 'size')) +
+      geom_line( aes(y=max , colour = 'max')) +
+      scale_colour_manual(values=c("red", "blue")) + # The colors match the SVX GUI
+      labs(colour="Metrics:") + 
+      xlab("Request Number") +
+      ylab("")
+  }, width = "auto", height = 400 )
+  output$commLine <- renderPlot({
+    ggplot( data=results() , aes(x=requestnum) ) + 
+      # Create each line. Unfortunately the labels are titled 'colour'
+      geom_line( aes(y=bytes , colour = 'bytes')) +
+      scale_colour_manual(values=c("blue")) + # The colors match the SVX GUI
       labs(colour="Metrics:") + 
       xlab("Request Number") +
       ylab("")

@@ -17,7 +17,7 @@ shinyUI(fluidPage(
       ),
       uiOutput("whereclause"),
       uiOutput("limit"),
-      uiOutput("metric"),
+      uiOutput("perfmetric"), #Performance metrics
       checkboxInput("showquery", "Show Query"),
       conditionalPanel("input.showquery == true",
         p(strong("SPARQL Query")),
