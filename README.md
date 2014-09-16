@@ -28,7 +28,7 @@ On your VM go to port 3838/sparqlverse-r/<<your app>> . This opens the /srv/shin
 
 - Clone the repo to /srv/shiny-server on the VM
 - Install node packages with `npm install`
-- Duplicate server.R.sample to server.R and set the endpoint
+- Duplicate any .sample files, removing the .sample filetype. 'endpoint.txt' for example. This is to keep developer-specific files out of the repo and reduce merge conflicts.
 - Read any specific instructions in the local reamde
 - install shiny packages as sudo:
 ```

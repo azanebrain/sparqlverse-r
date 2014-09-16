@@ -5,7 +5,7 @@ library(shiny)
 library(SPARQL)
 
 # vars
-endpoint <- "http://ws-akeen:8080/"
+endpoint <- includeText("endpoint.txt")
 
 # The query templates for each example
 
@@ -14,67 +14,22 @@ queryTemplateSlider <- "SELECT ?eventname LIMIT ?:limit"
 queryTemplateText <- "SELECT ?:eventname WHERE ?:where LIMIT ?limit" 
 
 # Functionality
-queryTemplateFetch <-
-  "SELECT ?eventname ?location ?category ?date
-  FROM <tickit>
-  WHERE { 
-   ?eventid <venueid> ?venueid .
-    ?venueid <venuename> ?location .
-    ?eventid <catid> ?catid .
-    ?catid <catname> ?category .
-    ?eventid <dateid> ?dateid .
-    ?dateid <caldate> ?date .
-    ?eventid <eventname> ?eventname .
-  } 
-  ORDER BY ?date ?eventname ?location ?category 
-  LIMIT ?:limit
-  "
-queryTemplateJoin <- 
-  "SELECT ?p ?o
-  FROM <tickit>
-  WHERE { ?:whereclause }
-  ORDER BY desc(?p) ?o 
-  LIMIT ?:limit
-  "
-queryTemplateAggregation <-
-  "SELECT ?event_name (count(*) as ?count)
-  FROM <tickit>
-  WHERE { 
-    ?event <eventname> ?event_name
-  }
-  GROUP BY ?event_name
-  ORDER BY desc(?count) ?event_name LIMIT ?:limit
-  "
+queryTemplateFetch <- includeText("template-fetch.txt")
+queryTemplateJoin <- includeText("template-join.txt")
+queryTemplateAggregation <- includeText("template-aggregation.txt")
 
 # Marketing
+
 # Social Graph
+
 # Fraud
+
 # Finance
+
 # Performance
-queryTemplateCPUUsage<-
-  "select 
-    ?requestnum( sum(?idle)as?idle ) 
-    (sum(?utime)as?user) 
-    (sum(?stime)as?sys) 
-    (sum(?iowait)as?iowait) 
-  where { table 'str_core_recent' } 
-  group by ?requestnum 
-  order by ?requestnum
-  "
-queryTemplateMemory<-
-  "select
-    ?requestnum(sum(?size)as?size)(sum(?max)as?max)
-  where{table'str_memory_recent'}
-  group by?requestnum 
-  order by?requestnum
-  "
-queryTemplateCommunications<-
-  "select
-    ?requestnum (sum(?bytes) as ?bytes) 
-  where { table 'str_network_recent' } 
-  group by ?requestnum 
-  order by ?requestnum
-  "
+queryTemplateCPUUsage<- includeText("template-cpuusage.txt")
+queryTemplateMemory<- includeText("template-memory.txt")
+queryTemplateCommunications<- includeText("template-communications.txt")
 
 
 shinyServer(function(input,output) {

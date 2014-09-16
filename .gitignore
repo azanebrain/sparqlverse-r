@@ -10,4 +10,4 @@ npm-debug.log
 .Rproj.user
 .Rhistory
 
-server.R
+*.sample
