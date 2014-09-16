@@ -22,7 +22,7 @@ shinyUI(fluidPage(
       checkboxInput("showquery", "Show Query"),
       conditionalPanel("input.showquery == true",
         p(strong("SPARQL Query")),
-        textOutput("SPARQLquery")
+        verbatimTextOutput("SPARQLquery")
       )
     ),
     mainPanel(
