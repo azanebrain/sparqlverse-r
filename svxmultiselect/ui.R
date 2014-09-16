@@ -8,9 +8,10 @@ shinyUI(fluidPage(
       selectInput( inputId = "input_type",
         "Loading input types...",
         choices = c(
-          "Performance",
           "Fetching",
           "Joining",
+          "Aggregation",
+          "Performance",
           "slider",
           "text"
         )

@@ -8,16 +8,12 @@ library(SPARQL)
 endpoint <- "http://ws-akeen:8080/"
 
 # The query templates for each example
+
+# DEMO:
 queryTemplateSlider <- "SELECT ?eventname LIMIT ?:limit" 
 queryTemplateText <- "SELECT ?:eventname WHERE ?:where LIMIT ?limit" 
-queryTemplateJoin <- 
-  "SELECT ?p ?o
-  FROM <tickit>
-  WHERE { ?:whereclause }
-  ORDER BY desc(?p) ?o 
-  LIMIT ?:limit
-  "
 
+# Functionality
 queryTemplateFetch <-
   "SELECT ?eventname ?location ?category ?date
   FROM <tickit>
@@ -33,7 +29,28 @@ queryTemplateFetch <-
   ORDER BY ?date ?eventname ?location ?category 
   LIMIT ?:limit
   "
+queryTemplateJoin <- 
+  "SELECT ?p ?o
+  FROM <tickit>
+  WHERE { ?:whereclause }
+  ORDER BY desc(?p) ?o 
+  LIMIT ?:limit
+  "
+queryTemplateAggregation <-
+  "SELECT ?event_name (count(*) as ?count)
+  FROM <tickit>
+  WHERE { 
+    ?event <eventname> ?event_name
+  }
+  GROUP BY ?event_name
+  ORDER BY desc(?count) ?event_name LIMIT ?:limit
+  "
 
+# Marketing
+# Social Graph
+# Fraud
+# Finance
+# Performance
 queryTemplateCPUUsage<-
   "select 
     ?requestnum( sum(?idle)as?idle ) 
@@ -76,6 +93,9 @@ shinyServer(function(input,output) {
     else if (input$input_type == "Joining" ) {
         temp <- sub("\\?:whereclause", input$whereclause, queryTemplateJoin)
         sub("\\?:limit", input$limit[1], temp)
+    } 
+    else if (input$input_type == "Aggregation" ) {
+        temp <- sub("\\?:limit", input$limit[1], queryTemplateAggregation)
     } 
     else if (input$input_type == "Performance" ) {
         # If the user has selected the Performance graphs, figure out which metric the user wants to focus on
@@ -135,6 +155,7 @@ shinyServer(function(input,output) {
       switch(input$input_type,
         "Fetching" = plotOutput("egoPlot"),
         "Joining" = plotOutput("egoPlot"),
+        "Aggregation" = plotOutput("egoPlot"),
         "Performance" = plotOutput("cpuUsageLine"),
         # Demo
         "slider" = sliderInput("dynamic", "Dynamic",
@@ -165,6 +186,13 @@ shinyServer(function(input,output) {
         min = 10,
         max = 100,
         step = 10,
+        value = 50
+      ),
+      "Aggregation" = sliderInput("limit",
+        "Set the range:",
+        min = 1,
+        max = 100,
+        step = 1,
         value = 50
       ),
       "slider" = sliderInput("sliderlimit",
