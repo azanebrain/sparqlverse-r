@@ -1,0 +1,5 @@
+SELECT ?p ?o
+FROM <tickit>
+WHERE { ?:whereclause }
+ORDER BY desc(?p) ?o 
+LIMIT ?:limit

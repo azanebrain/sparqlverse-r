@@ -1,0 +1,9 @@
+select ?requestnum( sum(?idle)as?idle ) 
+  (sum(?utime)as?user) 
+  (sum(?stime)as?sys) 
+  (sum(?iowait)as?iowait) 
+where { 
+  table 'str_core_recent' 
+} 
+group by ?requestnum 
+order by ?requestnum

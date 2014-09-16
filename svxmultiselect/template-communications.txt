@@ -1,0 +1,6 @@
+select ?requestnum (sum(?bytes) as ?bytes)
+where {
+  table 'str_network_recent' 
+} 
+group by ?requestnum 
+order by ?requestnum
