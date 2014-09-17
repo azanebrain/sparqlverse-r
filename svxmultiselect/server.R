@@ -11,12 +11,18 @@ endpoint <- includeText("endpoint.txt")
 
 # DEMO:
 queryTemplateSlider <- "SELECT ?eventname LIMIT ?:limit" 
-queryTemplateText <- "SELECT ?:eventname WHERE ?:where LIMIT ?limit" 
+queryTemplateText <- "SELECT ?p ?o
+  FROM <tickit>
+  WHERE { ?:whereclause }
+  ORDER BY desc(?p) ?o 
+  LIMIT ?:limit
+  " 
 
 # Functionality
 queryTemplateFetch <- includeText("template-fetch.txt")
 queryTemplateJoin <- includeText("template-join.txt")
 queryTemplateAggregation <- includeText("template-aggregation.txt")
+queryTemplateSubqueries <- includeText("template-subqueries.txt")
 
 # Marketing
 
@@ -46,11 +52,13 @@ shinyServer(function(input,output) {
         temp <- sub("\\?:limit", input$limit[1], queryTemplateFetch)
     } 
     else if (input$input_type == "Joining" ) {
-        temp <- sub("\\?:whereclause", input$whereclause, queryTemplateJoin)
-        sub("\\?:limit", input$limit[1], temp)
+        temp <- sub("\\?:limit", input$limit[1], queryTemplateJoin)
     } 
     else if (input$input_type == "Aggregation" ) {
         temp <- sub("\\?:limit", input$limit[1], queryTemplateAggregation)
+    } 
+    else if (input$input_type == "Subqueries" ) {
+        temp <- sub("\\?:whereclause", input$whereclause, queryTemplateSubqueries)
     } 
     else if (input$input_type == "Performance" ) {
         # If the user has selected the Performance graphs, figure out which metric the user wants to focus on
@@ -71,8 +79,8 @@ shinyServer(function(input,output) {
         sub("\\?:limit", input$sliderlimit[1], queryTemplateSlider)
     } 
     else if (input$input_type == "text" ) {
-        temp <- sub("\\?:where", "the where clause has changed", queryTemplateText)
-        sub("\\?:eventname", "the event name has changed", temp)
+        temp <- sub("\\?:where", input$whereclause, queryTemplateText)
+        sub("\\?:where", input$limit[1], temp)
     }
   })
 
@@ -121,7 +129,6 @@ shinyServer(function(input,output) {
     }
   })
 
-
   # The limit component
   output$limit <- renderUI({
     if (is.null(input$input_type)) {
@@ -139,7 +146,7 @@ shinyServer(function(input,output) {
       "Joining" = sliderInput("limit",
         "Set the range:",
         min = 10,
-        max = 100,
+        max = 500,
         step = 10,
         value = 50
       ),
@@ -150,7 +157,7 @@ shinyServer(function(input,output) {
         step = 1,
         value = 50
       ),
-      "slider" = sliderInput("sliderlimit",
+      "slider" = sliderInput("limit",
         "Set the range:",
         min = 1,
         max = 500,
@@ -167,7 +174,8 @@ shinyServer(function(input,output) {
       return()
     }
     switch(input$input_type,
-      "Joining" = textInput("whereclause", "Enter the WHERE clause:", "<person2> ?p ?o")
+      "Subqueries" = textInput("whereclause", "Enter the WHERE clause:", "?s ?p ?o "),
+      "text" = textInput("whereclause", "Enter the WHERE clause:", "<person2> ?p ?o")
     )
   })
 
@@ -192,7 +200,6 @@ shinyServer(function(input,output) {
   output$input_type_text <- renderText({
     input$input_type
   })
-     
   # Demo
   output$dynamic_value <- renderPrint({
     str(input$dynamic)

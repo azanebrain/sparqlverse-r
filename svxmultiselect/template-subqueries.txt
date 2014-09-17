@@ -1,0 +1,6 @@
+SELECT (count(*) as ?numberOfSubjects) 
+FROM <tickit> 
+{
+   SELECT DISTINCT ?s
+   WHERE { ?:whereclause }
+}

@@ -6,11 +6,12 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput( inputId = "input_type",
-        "Loading input types...",
+        "Input Types:",
         choices = c(
           "Fetching",
           "Joining",
           "Aggregation",
+          "Subqueries",
           "Performance",
           "slider",
           "text"
