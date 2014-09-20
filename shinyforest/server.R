@@ -10,7 +10,7 @@ shinyServer(function(input, output) {
 queryTemplate <- 
 "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
 PREFIX d1187: <http://data-gov.tw.rpi.edu/vocab/p/1187/>
-SELECT ?ye ?fi ?ac ?avgperfire
+SELECT ?ye ?fi ?ac ?avgperfire (?ac/?fi AS ?avgperfire)
 WHERE {GRAPH <d1187>{
     ?s d1187:year ?year .
     ?s d1187:fires ?fires .
@@ -18,7 +18,6 @@ WHERE {GRAPH <d1187>{
     BIND(xsd:integer(?year) AS ?ye)
     BIND(xsd:double(?fires) as ?fi)
     BIND(xsd:double(?acres) as ?ac)
-    BIND(?ac/?fi AS ?avgperfire)
 FILTER(?ye >= ?:yearMin && ?ye <= ?:yearMax)
 }}ORDER BY ?ye"
 
