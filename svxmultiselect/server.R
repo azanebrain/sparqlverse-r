@@ -86,7 +86,9 @@ shinyServer(function(input,output) {
 
   results <-reactive({SPARQL(endpoint, query())$results})
   # Ego Graph used for plots
-  ego <-reactive({graph.data.frame(results(), directed=F)})
+  # ego <-reactive({plot.igraph(results())})
+  ego <-reactive({graph.data.frame(results())})
+  # ego <-reactive({graph.data.frame(results(), directed=F)})
 
   # Performance Metrics
   perfmetric <- reactive({
