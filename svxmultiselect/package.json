@@ -1,0 +1,23 @@
+{
+  "name": "svxmultiselect",
+  "version": "0.0.1",
+  "description": "Select one of many SVX playground examples",
+  "main": "server.R",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "R -e \"shiny::runApp(appDir='.')\" & ",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/sparqlcity/sparqlverse-r"
+  },
+  "author": "SPARQLCity",
+  "license": "GPLv3",
+  "devDependencies": {
+    "gulp": "~3.8.8",
+    "run-sequence": "~1.0.0",
+    "gulp-ruby-sass": "~0.7.1",
+    "gulp-notify": "~1.8.0"
+  }
+}

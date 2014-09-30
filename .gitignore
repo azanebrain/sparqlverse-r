@@ -7,5 +7,9 @@ node_modules
 npm_debug.log
 npm-debug.log
 
+bower_components
+
 .Rproj.user
 .Rhistory
+
+.sass-cache
