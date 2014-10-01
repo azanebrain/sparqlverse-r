@@ -35,7 +35,9 @@ shinyUI(fluidPage(
         tabPanel("Dynamic UI",
           uiOutput("ui"),
           tags$p("Input type:"),
-          verbatimTextOutput("input_type_text")
+          verbatimTextOutput("input_type_text"),
+          tags$p( strong( "About this query:" ) ),
+          tags$p( textOutput("about_query") )
         ),
         tabPanel("Table",
           dataTableOutput("resultsTable")

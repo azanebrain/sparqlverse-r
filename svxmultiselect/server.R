@@ -202,18 +202,13 @@ shinyServer(function(input,output) {
   output$input_type_text <- renderText({
     input$input_type
   })
-  # Demo
-  output$dynamic_value <- renderPrint({
-    str(input$dynamic)
-  })
 
   # Ego Plot
   output$egoPlot <- renderPlot({
     plot(ego())
   }, width="auto", height=400 )
 
-  # Line chart
-  # Currently only doing the CPU Usage. Need to figure out how to get the performance metric, and regerenate the appropriate line graph
+  # Line charts for system performance
   output$cpuUsageLine <- renderPlot({
     ggplot( data=results() , aes(x=requestnum) ) + 
       # Create each line. Unfortunately the labels are titled 'colour'
@@ -226,8 +221,6 @@ shinyServer(function(input,output) {
       xlab("Request Number") +
       ylab("")
   }, width = "auto", height = 400 )
-
-  # Figuring out how to work on the other ones
   output$memoryLine <- renderPlot({
     ggplot( data=results() , aes(x=requestnum) ) + 
       # Create each line. Unfortunately the labels are titled 'colour'
@@ -247,6 +240,22 @@ shinyServer(function(input,output) {
       xlab("Request Number") +
       ylab("")
   }, width = "auto", height = 400 )
+
+  # Short blurb about the query and why it is interesting
+  output$about_query <- renderText({
+    if (is.null(input$input_type)) {
+      return()
+    }
+    switch(input$input_type,
+      "Fetching" = "Fetches triples for a single person",
+      "Joining" = "Determines where and when an event takes place",
+      "Aggregation" = "A simple aggregation of events to determine the 10 most frequent events",
+      "Subqueries" = "Determines how many distinct subjects are in the Tickit dataset",
+      "Performance" = "The current system performance",
+      "slider" = "Adds a slider to the main panel",
+      "text" = "Adds a text input box to the main panel"
+    )
+  })
 
   # Table
   output$resultsTable <- renderDataTable({
