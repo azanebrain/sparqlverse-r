@@ -2,8 +2,9 @@ library(ggplot2)
 library(shiny)
 library(SPARQL)
 
-endpoint <- "http://ws-akeen:8080/runQuery.html"
-
+#endpoint <- "http://ws-akeen:8080/runQuery.html"
+# vars
+endpoint <- includeText("endpoint.txt")
 # Define server logic 
 shinyServer(function(input, output) {
   
