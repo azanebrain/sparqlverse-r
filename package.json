@@ -1,12 +1,12 @@
 {
-  "name": "svxmultiselect",
+  "name": "SPARQLvsR",
   "version": "0.0.1",
-  "description": "Select one of many SVX playground examples",
+  "description": "Gallery of R demos running against SPARQLverse",
   "main": "server.R",
   "scripts": {
     "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "R -e \"shiny::runApp(appDir='.')\" & ",
+    "serve": "bash serve.sh",
     "watch": "gulp watch"
   },
   "repository": {

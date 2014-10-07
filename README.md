@@ -16,7 +16,15 @@ R -e "shiny::runApp('~/sparqlverse-r/shinyappsv')" &
 ```
 It will try to automatically pop open a new window with the visualization. If it does not work, it will tell you the port. Copy that and follow this pattern: `http://ws-akeen:8787/p/<<port>>`
 
-Shiny Server
+## Build assets for development
+
+For development, you will need serve the Shiny Server, and watch for file changes.
+```
+npm run serve
+npm run watch
+```
+
+## Shiny Server
 
 - Boot up the Shiny Server with `start shiny-server` and access port 3838 (https://ws-akeen:3838)
 
@@ -24,16 +32,28 @@ Shiny Server
 
 On your VM go to port 3838/sparqlverse-r/<<your app>> . This opens the /srv/shiny-server/ directory
 
-## Setup 
+# Setup 
 
 - Clone the repo to /srv/shiny-server on the VM
 - Install node packages with `npm install`
 - Duplicate any .sample files, removing the .sample filetype. 'endpoint.txt' for example. This is to keep developer-specific files out of the repo and reduce merge conflicts.
-- Read any specific instructions in the local reamde
+- Build the global assets with `npm run build` in this directory
+- Read any specific instructions in the local readme
 - install shiny packages as sudo:
 ```
 sudo su -c "R -e \"install.packages('<package name>', repos='http://cran.rstudio.com/')\"" &
 ```
+
+# Build for production
+
+Build the global assets with `npm run build` in this directory
+
+Individual examples might have specific stylesheets, scripts, and images that will be located in the project's www directory.
+
+# Dependencies
+- NPM
+- Ruby
+- Sass
 
 ### Running in /srv
 If you cannot clone the repo to /srv, copy from your main directory to /srv. Check the ownership and make sure all of the main files are owned by the paraccel user and paraccel group

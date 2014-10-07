@@ -13,3 +13,9 @@ bower_components
 .Rhistory
 
 .sass-cache
+
+# R default web distro (compiled css, js, images, etc)
+www
+
+# R endpoint text file
+endpoint.txt

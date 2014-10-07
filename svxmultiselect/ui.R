@@ -3,7 +3,8 @@ library(shiny)
 
 shinyUI(fluidPage(
   tags$head(
-    tags$link(rel = "stylesheet", type = "text/css", href = "app.css")
+    # tags$link(rel = "stylesheet", type = "text/css", href = "app.css")
+    tags$link(rel = "stylesheet", type = "text/css", href = "../www/global.css")
   ),
   titlePanel("SVX Multiselect"),
   sidebarLayout(
