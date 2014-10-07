@@ -1,6 +1,6 @@
 {
   "name": "SPARQLvsR",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Gallery of R demos running against SPARQLverse",
   "main": "server.R",
   "scripts": {
