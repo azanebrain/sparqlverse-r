@@ -12,11 +12,7 @@ queryTemplateMemory<- includeText("template-memory.txt")
 queryTemplateCommunications<- includeText("template-communications.txt")
 
 shinyServer(function(input,output) {
-  # Does this function need 'session' like in svxtickitjoin ?
-
-  # Modify the query statement depending on each unique interface
-  # Each interface has different configurable values that must be modified in 
-  # the query that is being sent to SVX
+  # The query that is being sent to SVX
   query <- reactive({
     if (is.null(input$input_type)) {
       return(NULL)
