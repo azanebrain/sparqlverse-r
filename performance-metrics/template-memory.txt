@@ -1,0 +1,6 @@
+select ?requestnum(sum(?size)as?size)(sum(?max)as?max)
+where{
+  table'str_memory_recent'
+}
+group by?requestnum 
+order by?requestnum
