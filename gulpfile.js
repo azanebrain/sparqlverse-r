@@ -1,7 +1,8 @@
 var gulp      = require('gulp'),
+  jade        = require('gulp-jade'),
   notify      = require("gulp-notify"),
-  runSequence = require('run-sequence'),
-  sass        = require('gulp-ruby-sass');
+  sass        = require('gulp-ruby-sass'),
+  runSequence = require('run-sequence');
 
 // Global variables
 var dist = './www', // Distribution directory
@@ -11,6 +12,11 @@ var paths = { //Paths
   styles: { 
     srcdir:  src + '/sass',
     src:   src + '/sass/*.sass',
+    dest:  dist + ''
+  },
+  views: { 
+    srcdir:  src + '/views',
+    src:   src + '/views/**/*.jade',
     dest:  dist + ''
   }
 };
@@ -46,10 +52,25 @@ gulp.task('styles', function(callback) {
 });
 
 /**
+ * Compile the views
+ */
+gulp.task('views', function() {
+  var YOUR_LOCALS = {}
+      , compress_views = env != 'prod' ? true : false; //compress the output if we are in prod
+
+  return gulp.src( paths.views.src )
+    .pipe(jade({
+      pretty : compress_views
+      , locals: YOUR_LOCALS
+    }))
+    .pipe(gulp.dest( dist+'/' ));
+});
+/**
  * Watch for changes
  */
 gulp.task('watch', function() { 
   gulp.watch(paths.styles.src, ['styles']);
+  gulp.watch(paths.views.src, ['views']);
 });
 
 // The default task is watch
@@ -64,6 +85,7 @@ gulp.task('build', function(callback) {
   runSequence(
     'set-environment',
     'styles',
+    'views',
     callback
   );
   gulp.src('.')
