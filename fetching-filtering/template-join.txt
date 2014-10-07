@@ -1,0 +1,12 @@
+SELECT ?eventname ?location ?category ?date
+FROM <tickit>
+WHERE { 
+  ?eventid <venueid> ?venueid .
+  ?venueid <venuename> ?location .
+  ?eventid <catid> ?catid .
+  ?catid <catname> ?category .
+  ?eventid <dateid> ?dateid .
+  ?dateid <caldate> ?date .
+  ?eventid <eventname> ?eventname .
+} ORDER BY ?date ?eventname ?location ?category 
+LIMIT ?:limit
