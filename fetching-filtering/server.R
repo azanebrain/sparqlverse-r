@@ -7,8 +7,66 @@ library(SPARQL)
 # vars
 endpoint <- includeText("endpoint.txt")
 
+# endpointExists <- getURL('http://svx.sparqlcity.com:8080')
+# endpointExists <- domain('http://svx.sparqlcity.com:8080' )
+# http://shiny.rstudio.com/reference/shiny/latest/ - extending shiny section
+endpointExists <- FALSE
+# endpointExists <- htmlDependency(name="svx", src="http://ws-azane:8080/svx.html")
+# htmlDependency(name="svx", c(file="svx.html", href="http://ws-azane:8080"))
+
+if ( endpointExists == TRUE ) {
+# if ( typeof(endpointExists) == "character" ) {
+  queryTemplateFetch <- "endpoint exists"
+} else {
+  queryTemplateFetch <- "endpoint does NOT exist"
+  # queryTemplateFetch <- typeof(endpointExists)
+}
+
+# x <- SPARQL(endpoint, "select ?g where { graph?g{} }")
+x <- 'list(g = "<tickit>") NULL'
+
+# Now test that the correct table is loaded
+# endpointExists <- SPARQL(endpoint, "select ?g where { graph?g{} }") 
+endpointExists <- 'list(g = "<tickit>") NULL'
+
+# if ( endpointExists == "ya" ) {
+#   queryTemplateFetch <- "trueeee"
+# } else if ( endpointExists == '' ) {
+#   queryTemplateFetch <- "End point is off"
+# # } else if ( grep( 'tickit', endpointExists ) ) {
+#   # queryTemplateFetch <- paste ( "grep found tickit:" , endpointExists  )
+# } else {
+#   queryTemplateFetch <- "endpointExists"
+# }
+
+# grep will be 1 or '', so true or false?
+# endpointExists <- 'list(g = "<tickit>") NULL' #works
+endpointExists <- SPARQL(endpoint, "select ?g where { graph?g{} }") 
+
+print ( paste('endpointExists: ' , endpointExists) )
+print ( paste('grep one: ' , grep( 'tickit', endpointExists ) ) )
+print ( paste('grep two: ' , grep( 'tickit', SPARQL(endpoint, "select ?g where { graph?g{} }") ) ) ) # When sbx is running and tickit is loaded, this returns 1
+
+# If svx is not running, this will return NULL
+  # Should be connection refused
+if ( endpointExists == NULL || endpointExists == "list()" ) {
+  print ("endpoint is null")
+} else {
+
+  print ("endpoint is NON null")
+}
+if ( grep( 'tickit', SPARQL(endpoint, "select ?g where { graph?g{} }") ) == 1 ) {
+  queryTemplateFetch <- "SVX is running. Tickit is loaded."
+} else {
+  queryTemplateFetch <- "Failure."
+}
+
+# loaded: list(g = "<tickit>") NULL
+# unloaded: list() NULL
+# SVX unreachable: (empty)
+
 # The query template
-queryTemplateFetch <- includeText("template-fetch.txt")
+# queryTemplateFetch <- includeText("template-fetch.txt")
 queryTemplateJoin <- includeText("template-join.txt")
 queryTemplateAggregation <- includeText("template-aggregation.txt")
 
@@ -78,16 +136,6 @@ shinyServer(function(input,output) {
       )
     )
   })
-
-  # # The where clause component
-  # output$whereclause <- renderUI({
-  #   if (is.null(input$input_type)) {
-  #     return()
-  #   }
-  #   switch(input$input_type,
-  #     "Subqueries" = textInput("whereclause", "Enter the WHERE clause:", "?s ?p ?o ")
-  #   )
-  # })
 
   # Demo
   output$input_type_text <- renderText({
