@@ -11,9 +11,11 @@ shinyUI(fluidPage(
       selectInput( inputId = "input_type",
         "Input Types:",
         choices = c(
+          "PieSample",
           "PieChart",
           "EgoSample",
-          "PieSample"
+          "TwoWayTable",
+          "Map"
         )
       ),
       # uiOutput("whereclause"),

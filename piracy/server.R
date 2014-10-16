@@ -89,7 +89,9 @@ shinyServer(function(input,output) {
       switch(input$input_type,
         "PieChart" = plotOutput("piePlot"),
         "EgoSample" = plotOutput("egoPlot"),
-        "PieSample" = plotOutput("pie")
+        "PieSample" = plotOutput("pie"),
+        "TwoWayTable" = plotOutput("twoWayTablePlot"),
+        "Map" = plotOutput("mapPlot")
       )
     }
   })
@@ -114,6 +116,45 @@ shinyServer(function(input,output) {
     sorted_counts <- sort(count_per_region)
 
     pie(sorted_counts, col=rainbow(12))
+  }, width="auto", height=400 )
+
+  # Two Way Table
+  output$twoWayTablePlot <- renderPlot({
+    q <- paste(sparql_prefix,
+      "SELECT *
+       FROM <piracy>
+       WHERE {
+         ?event sem:eventType ?event_type .
+         ?event sem:hasPlace ?place .
+         ?place eez:inPiracyRegion ?region .
+       } LIMIT 125")
+    res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+    event_region_table <- table(res$event_type,res$region)
+    par(mar=c(4,10,1,1))
+    barplot(event_region_table, col=rainbow(10), horiz=TRUE, las=1, cex.names=0.8)
+    legend("topright", rownames(event_region_table),
+           cex=0.8, bty="n", fill=rainbow(10))
+  }, width="auto", height=400 )
+
+  # Map
+  output$mapPlot <- renderPlot({
+    q <- paste(sparql_prefix,
+      "SELECT *
+       FROM <piracy>
+       WHERE {
+         ?event sem:eventType ?event_type .
+         ?event sem:hasPlace ?place .
+         ?place wgs84:lat ?lat .
+         ?place wgs84:long ?long .
+       } LIMIT 125")
+    res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
+    qmap('Gulf of Aden', zoom=2, legend='bottomright') +
+    geom_point(aes(x=long, y=lat, colour=event_type), data=res) +
+    scale_color_manual(values = rainbow(10))
+    qmap('Gulf of Aden', zoom=2) +
+    geom_point(aes(x=long, y=lat, colour=event_type), data=res) +
+    scale_color_manual(values = rainbow(10))
+
   }, width="auto", height=400 )
   
   # Short blurb about the query and why it is interesting
