@@ -1,0 +1,119 @@
+@base             <file:///home/poseidon/piracy_lod/piracy/piracy_nga_imb_mapping_2011-10-05T18:04:49+0200.rdf> .
+@prefix     foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix      owl: <http://www.w3.org/2002/07/owl#> .
+@prefix      rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix  foaf-nl: <http://www.few.vu.nl/~wrvhage/foaf.rdf#> .
+@prefix poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/> .
+@prefix     opmv: <http://purl.org/net/opmv/ns#> .
+@prefix  dcterms: <http://purl.org/dc/terms/> .
+
+# Named toplevel resources (34)
+
+<piracy_nga_imb_mapping_2011-10-05T18:04:49+0200.rdf>
+	dcterms:creator foaf-nl:i ;
+	opmv:wasGeneratedAt <http://semanticweb.cs.vu.nl/poseidon/ns/instances/time_2011-10-05t18:04:49Z> ;
+	opmv:wasGeneratedBy [ a opmv:Process ;
+			      opmv:wasPerformedBy <http://eculture.cs.vu.nl/git/poseidon/?p=code.git;a=blob_plain;f=piracy/map_nga_imb.pl;hb=HEAD>
+			    ] .
+
+<http://eculture.cs.vu.nl/git/poseidon/?p=code.git;a=blob_plain;f=piracy/map_nga_imb.pl;hb=HEAD>
+	a opmv:Agent .
+
+poseidon:event_mss_2010_1
+	owl:sameAs poseidon:event_2010_094 .
+
+poseidon:event_mss_2010_10
+	owl:sameAs poseidon:event_2010_073 .
+
+poseidon:event_mss_2010_11
+	owl:sameAs poseidon:event_2010_072 .
+
+poseidon:event_mss_2010_12
+	owl:sameAs poseidon:event_2010_071 .
+
+poseidon:event_mss_2010_13
+	owl:sameAs poseidon:event_2010_085 .
+
+poseidon:event_mss_2010_14
+	owl:sameAs poseidon:event_2010_068 .
+
+poseidon:event_mss_2010_15
+	owl:sameAs poseidon:event_2010_067 .
+
+poseidon:event_mss_2010_16
+	owl:sameAs poseidon:event_2010_066 .
+
+poseidon:event_mss_2010_18
+	owl:sameAs poseidon:event_2010_063 .
+
+poseidon:event_mss_2010_19
+	owl:sameAs poseidon:event_2010_062 .
+
+poseidon:event_mss_2010_2
+	owl:sameAs poseidon:event_2010_093 .
+
+poseidon:event_mss_2010_20
+	owl:sameAs poseidon:event_2010_061 .
+
+poseidon:event_mss_2010_21
+	owl:sameAs poseidon:event_2010_059 .
+
+poseidon:event_mss_2010_22
+	owl:sameAs poseidon:event_2010_060 .
+
+poseidon:event_mss_2010_23
+	owl:sameAs poseidon:event_2010_065 .
+
+poseidon:event_mss_2010_26
+	owl:sameAs poseidon:event_2010_053 .
+
+poseidon:event_mss_2010_27
+	owl:sameAs poseidon:event_2010_052 .
+
+poseidon:event_mss_2010_28
+	owl:sameAs poseidon:event_2010_090 .
+
+poseidon:event_mss_2010_29
+	owl:sameAs poseidon:event_2010_086 .
+
+poseidon:event_mss_2010_3
+	owl:sameAs poseidon:event_2010_088 .
+
+poseidon:event_mss_2010_31
+	owl:sameAs poseidon:event_2010_056 .
+
+poseidon:event_mss_2010_35
+	owl:sameAs poseidon:event_2010_082 .
+
+poseidon:event_mss_2010_37
+	owl:sameAs poseidon:event_2010_089 .
+
+poseidon:event_mss_2010_4
+	owl:sameAs poseidon:event_2010_084 .
+
+poseidon:event_mss_2010_40
+	owl:sameAs poseidon:event_2010_083 .
+
+poseidon:event_mss_2010_42
+	owl:sameAs poseidon:event_2010_070 .
+
+poseidon:event_mss_2010_5
+	owl:sameAs poseidon:event_2010_084 .
+
+poseidon:event_mss_2010_6
+	owl:sameAs poseidon:event_2010_081 .
+
+poseidon:event_mss_2010_7
+	owl:sameAs poseidon:event_2010_079 .
+
+poseidon:event_mss_2010_8
+	owl:sameAs poseidon:event_2010_076 .
+
+poseidon:event_mss_2010_9
+	owl:sameAs poseidon:event_2010_075 .
+
+foaf-nl:i
+	a dcterms:Agent ,
+	  opmv:Agent ;
+	foaf:homepage <http://www.few.vu.nl/~wrvhage> ;
+	foaf:name "Willem Robert van Hage" .

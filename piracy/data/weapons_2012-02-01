@@ -1,0 +1,5560 @@
+@base             <http://semanticweb.cs.vu.nl/lop/weapons_2012-02-01> .
+@prefix     rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/> .
+@prefix      org: <http://purl.org/dc/> .
+
+# Named toplevel resources (1,811)
+
+<>
+	org:author "Marieke van Erp" ;
+	org:date "01-Feb-2012" ;
+	rdfs:comment "This file describes the weapons types that were automatically extracted from the Piracy IMB reports for the Linked Open Piracy project. 200 Randomly selected comments sections from report from 2007-2011 were manually annotated for weapon types, with which the RIPPER algorithm (implemented in WEKA version 3.6.2) was trained and run on the remaining 1610 comments sections. Overall precision, recall and F-1 score on the 200 annotated examples in a 10-Fold cross validation experiment was .761, .78 and .768 respectively." .
+
+poseidon:event_2007_001
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_002
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_003
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_004
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_005
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_006
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_007
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_008
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_009
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_010
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_011
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_012
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_013
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_014
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_015
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_016
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_017
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_018
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_019
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_020
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_021
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_022
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_023
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_024
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_025
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_026
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_027
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_028
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_029
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_030
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_031
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_032
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_033
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_034
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_035
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_036
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_037
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_038
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_039
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_040
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2007_041
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_042
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_043
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_044
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_045
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_045_1
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_047
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_048
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_049
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_050
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_051
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_052
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2007_053
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2007_054
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_055
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_056
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_057
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_058
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_059
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_060
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_061
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_062
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_063
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_064
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_065
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_066
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_067
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_068
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_069
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_070
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_071
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_072
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_073
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_074
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_075
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_076
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_077
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_078
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_079
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_080
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_081
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_082
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_083
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_084
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_085
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_086
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_087
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_087_1
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_089
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_090
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_091
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_092
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_093
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_094
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_095
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_096
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_097
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_098
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_099
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_100
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_101
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_102
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_103
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_104
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_105
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_106
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_107
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_108
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_109
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_110
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_111
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_112
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_113
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_114
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_115
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_116
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_117
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_118
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_119
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_120
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_121
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_122
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_123
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_124
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_125
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_126
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_127
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_128
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_129
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_130
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_131
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_132
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_133
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_134
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_135
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_136
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2007_137
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_138
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_139
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_140
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_141
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_142
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_143
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_144
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_145
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_146
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_147
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_148
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_149
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_150
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_151
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_152
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_153
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_154
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_155
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_156
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_157
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_158
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_159
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_160
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_161
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_162
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_163
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_164
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_165
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_166
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_167
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_168
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_169
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_170
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_171
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_172
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_173
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_174
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_175
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_176
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_177
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_178
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_179
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_180
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_181
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_182
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_183
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_184
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_185
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_186
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_187
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_188
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_189
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_190
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_191
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_192
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_193
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_194
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_195
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_196
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_197
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_198
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_199
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_200
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_201
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_202
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_203
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_204
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_205
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_206
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_207
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_208
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_209
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_210
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_211
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_212
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_213
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2007_214
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_215
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_216
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2007_217
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_218
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_219
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_220
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_221
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_222
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_223
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_224
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_225
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_226
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_227
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_228
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_229
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_230
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_231
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_232
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_233
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_234
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_235
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_236
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_237
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_238
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_239
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_240
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_241
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_242
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_243
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_244
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_245
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_246
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_247
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_248
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_249
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_250
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_253
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_254
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_255
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_256
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_257
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_258
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_259
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2007_260
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2007_261
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2007_262
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2007_263
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_001
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_002
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_003
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_004
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_005
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_006
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_007
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_008
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_009
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_010
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_011
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_012
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_013
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_014
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_015
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_016
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_017
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_018
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_019
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_020
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_021
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_022
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_023
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_024
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_025
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_026
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_027
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_028
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_029
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_030
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_031
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_032
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_033
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_034
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_035
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_036
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_037
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_038
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_039
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_040
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_041
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_042
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_043
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_044
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_045
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_046
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_047
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_048
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_049
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_050
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_051
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_052
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_053
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_054
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_055
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_056
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_057
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_058
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_059
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_060
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_061
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_062
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_063
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_064
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_065
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_066
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_067
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_068
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_069
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_070
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_071
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_072
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_073
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_074
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_075
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_076
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_077
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_078
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_079
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_080
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_081
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_082
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_083
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_084
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_085
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_086
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_087
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_088
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_089
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_090
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_091
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_092
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_093
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_094
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_095
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_096
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_097
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_098
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_099
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_100
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_101
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_102
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_103
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_104
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_105
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_106
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_107
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_108
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_109
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_110
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_111
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_112
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_113
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_114
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_115
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_116
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_117
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_118
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_119
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_120
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_121
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_122
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_123
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_124
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_125
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_126
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_127
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_128
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_129
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_130
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_131
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_132
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_133
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_134
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_135
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_136
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_137
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_138
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_139
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_140
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_141
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_142
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_143
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_144
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_145
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_146
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_147
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_148
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_149
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_150
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_151
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_152
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_153
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_154
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_155
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_156
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_157
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_158
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_159
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_160
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_161
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_162
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_163
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_164
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_165
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_166
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_167
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_168
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_169
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_170
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_171
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_172
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_173
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_174
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_175
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_176
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_177
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_178
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_179
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_180
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_181
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_182
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_183
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_184
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_185
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_186
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_187
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_188
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_189
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_190
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_191
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_192
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_193
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_194
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_195
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_196
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_197
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_198
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_199
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_200
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_201
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_202
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_203
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_204
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_205
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_206
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_207
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_208
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_209
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_210
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_211
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_212
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_213
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_214
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_215
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_216
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_217
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_218
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_219
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_220
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_221
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_222
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_223
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_224
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_225
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_226
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_227
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_228
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_229
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_230
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_231
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_232
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_233
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_234
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_235
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_236
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_237
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_238
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_239
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_240
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_241
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_242
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_243
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_244
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_245
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_246
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_247
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_248
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_249
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_251
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_252
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_253
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_254
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_255
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_256
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_257
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_258
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_259
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_260
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_261
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_262
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_263
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_264
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_265
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2008_266
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_267
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_268
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_269
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_270
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_271
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_272
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_273
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_274
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_275
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_276
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_277
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_278
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2008_279
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_280
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_281
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_282
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_283
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_284
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2008_285
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_286
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_287
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_288
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_289
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2008_290
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_291
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_292
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2008_293
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_001
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_002
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_003
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_004
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_005
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_006
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_007
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_008
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_009
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_010
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_011
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_012
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_013
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_014
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_015
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_016
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_017
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_018
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_019
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_020
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_022
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_023
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_024
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_025
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_026
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_027
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_028
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_029
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_030
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_031
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_032
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_033
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_034
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_035
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_036
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_037
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_038
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_039
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_040
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_041
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_042
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_043
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_044
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_045
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_046
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_047
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_048
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_049
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_050
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_051
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_052
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_053
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_054
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_055
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_056
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_057
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_058
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_059
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_060
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_061
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_062
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_063
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_064
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_065
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_066
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_067
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_068
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_069
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_070
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_071
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_072
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_073
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_074
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_075
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_076
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_077
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_078
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_079
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_080
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_081
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_082
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_083
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_084
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_085
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_086
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_087
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_088
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_089
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_090
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_091
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_092
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_093
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_094
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_095
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_098
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_099
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_100
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_101
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_102
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_103
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_104
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_105
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_106
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_107
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_108
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_109
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_110
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_111
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_112
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_113
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_114
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_115
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_116
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_117
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_118
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_119
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_120
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_121
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_122
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_123
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_124
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_125
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_126
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_127
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_128
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_129
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_130
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_131
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_132
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_133
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_134
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_137
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_138
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_139
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_140
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_141
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_143
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_144
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_145
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_146
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_147
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_148
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_149
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_150
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_151
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_152
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_153
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_154
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_155
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_156
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_157
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_158
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_159
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_160
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_161
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_162
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_163
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_164
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_165
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_166
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_167
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_168
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_169
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_170
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_171
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_172
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_173
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_174
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_175
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_176
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_177
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_178
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_179
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_180
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_181
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_182
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_183
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_184
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_185
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_186
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_187
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_188
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_189
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_190
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_191
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_193
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_194
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_195
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_196
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_197
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_198
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_199
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_200
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_201
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_202
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_203
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_204
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_205
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_206
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_207
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_209
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_210
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_211
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_212
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_213
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_214
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_215
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_216
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_217
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_218
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_219
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_220
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_222
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_223
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_224
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_225
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_226
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_227
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_228
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_229
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_230
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_231
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_232
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_233
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_234
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_235
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_236
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_237
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_238
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_239
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_240
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_241
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_242
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_243
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_244
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_245
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_246
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_247
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_248
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_249
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_250
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_251
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_252
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_253
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_254
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_256
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_257
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_258
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_259
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_260
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_261
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_262
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_263
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_264
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_265
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_266
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_267
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_268
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_269
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_270
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_271
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_272
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_273
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_274
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_275
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_276
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_277
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_278
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_279
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_280
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_281
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_282
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_283
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_284
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_285
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_286
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_287
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_288
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_289
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_290
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_291
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_292
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_293
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_294
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_295
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_296
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_297
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_298
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_299
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_300
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_301
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_302
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_303
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_304
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_305
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_306
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_307
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_308
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_309
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_310
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_311
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_312
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_313
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_314
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_315
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_316
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_317
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_318
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_319
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_320
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_321
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_322
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_323
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_324
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_325
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_326
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_327
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_328
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_329
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_330
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_331
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_332
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_333
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_334
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_335
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_337
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_338
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_339
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_340
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_341
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_342
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_343
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_344
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_345
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_346
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_347
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_348
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_349
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_350
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_353
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_354
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_355
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_356
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_357
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_358
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_359
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_360
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_361
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_362
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_363
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_364
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_365
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_366
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_367
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_368
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_369
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_370
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_371
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2009_372
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_373
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_374
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_375
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_376
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_377
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_378
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_379
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_380
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_381
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_382
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_383
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_384
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_385
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_386
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_387
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_388
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_389
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_390
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_391
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_392
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2009_393
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_394
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_395
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_397
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_398
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_399
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_400
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_401
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_402
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_402_1
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2009_403
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2009_S1
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_S2
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_S3
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_S4
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2009_S5
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_001
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_002
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_003
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_004
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_005
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_007
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_008
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_009
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_010
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_011
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_012
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_013
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_014
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_015
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_016
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_017
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_018
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_019
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_020
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_021
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_022
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_023
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_024
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_025
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_026
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_027
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_028
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_029
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_030
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_032
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_033
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_034
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_035
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_037
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_038
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_039
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_041
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_042
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_043
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_044
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_045
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_046
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_047
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_048
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_049
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_050
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_051
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_052
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_053
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_054
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_055
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_056
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_057
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_058
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_059
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_060
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_061
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_062
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_063
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_064
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_065
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_066
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_067
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_068
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_069
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_070
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_071
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_072
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_073
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_074
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_075
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_076
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_077
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_078
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_079
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_080
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_081
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_082
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_083
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_084
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_085
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_086
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_087
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_088
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_089
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_090
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_092
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_093
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_094
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_095
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_096
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_097
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_098
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_099
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_100
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_101
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_102
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_103
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_104
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_105
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_106
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_107
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_108
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_109
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_110
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_111
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_112
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_113
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_114
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_115
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_116
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_117
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_118
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_119
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_120
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_121
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_122
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_123
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_125
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_126
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_127
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_128
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_129
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_130
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_131
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_132
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_133
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_134
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_135
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_137
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_138
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_139
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_140
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_141
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_142
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_143
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_144
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_145
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_146
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_147
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_148
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_149
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_150
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_151
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_152
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_153
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_154
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_155
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_156
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_157
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_158
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_159
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_160
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_161
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_162
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_164
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_165
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_166
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_167
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_168
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_169
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_170
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_171
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_172
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_173
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_174
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_175
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_176
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_177
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_178
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_179
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_180
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_181
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_182
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_183
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_184
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_185
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_186
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_187
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_188
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_189
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_190
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_191
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_192
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_193
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_194
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_195
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_196
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_197
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_198
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_199
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_200
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_201
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_202
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_203
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_204
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_205
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_207
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_208
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_209
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_210
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_211
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_212
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_213
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_214
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_215
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_216
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_217
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_218
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_219
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_220
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_221
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_222
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_223
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_224
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_225
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_226
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_227
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_228
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_229
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_230
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_231
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_232
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_233
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_234
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_235
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_236
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_237
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_238
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_239
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_240
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_241
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_242
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_243
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_244
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_245
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_246
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_247
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_248
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_249
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_250
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_251
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_252
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_254
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_255
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_256
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_257
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_258
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_259
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_260
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_261
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_262
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_263
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_264
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_265
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_266
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_267
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_268
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_269
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_271
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_272
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_273
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_274
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_275
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_276
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_277
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_278
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_280
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_281
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_282
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_283
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_284
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_285
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_286
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_287
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_288
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_289
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_290
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_291
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_292
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_293
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_294
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_295
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_296
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_297
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_298
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_299
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_300
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_301
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_302
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_304
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_305
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_306
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_307
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_308
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_309
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_310
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_311
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_312
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_313
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_314
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_315
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_319
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_320
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_322
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_323
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_324
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_325
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_326
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_327
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_328
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_330
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_331
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_332
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_333
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_334
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_335
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_336
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_337
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_338
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_339
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_340
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_341
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_342
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_343
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_344
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_346
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_347
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_348
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_349
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_350
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_351
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_352
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_353
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_354
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_355
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_356
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_357
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_358
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_360
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_362
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_363
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_364
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_365
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_366
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_367
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_368
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_369
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_370
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_371
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_372
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_373
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_374
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_375
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_377
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_378
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_379
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_380
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_381
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_382
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_383
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_384
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_385
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_385_1
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_386
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_387
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_388
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_389
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_390
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_391
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_392
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_393
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_394
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_395
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_396
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_397
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_398
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_399
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_400
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_401
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_402
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_403
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_404
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_405
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_406
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_407
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_408
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_409
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_410
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_411
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_412
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_413
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_414
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_415
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_416
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_417
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_418
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_419
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_420
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_421
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_422
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_423
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_424
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_425
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_426
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_427
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_428
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_429
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_430
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_431
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_432
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_433
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_434
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_435
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_436
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2010_437
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_438
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_439
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_440
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_441
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2010_442
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_443
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_444
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2010_445
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2010_S1
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_S2
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2010_S3
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_001
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_002
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_003
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_004
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_005
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_006
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_007
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_008
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_009
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_010
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_011
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_012
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_013
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_014
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_015
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_016
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_017
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_018
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_019
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_020
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_021
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_022
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_023
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_024
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_025
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_026
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_027
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_028
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_030
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_031
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_032
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_033
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_034
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_035
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_036
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_037
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_038
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_039
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_040
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_041
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_042
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_043
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_044
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_045
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_046
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_047
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_048
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_049
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_050
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_051
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_052
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_053
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_054
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_055
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_056
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_057
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_058
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_059
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_060
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_061
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_062
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_063
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_064
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_065
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_066
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_067
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_068
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_069
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_070
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_071
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_072
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_073
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_074
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_075
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_077
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_079
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_080
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_081
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_082
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_083
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_084
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_085
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_086
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_087
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_088
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_089
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_090
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_091
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_092
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_093
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_094
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_095
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_096
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_097
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_099
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_100
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_101
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_102
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_103
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_104
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_105
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_107
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_108
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_109
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_110
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_111
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_112
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_113
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_114
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_115
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_116
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_117
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_118
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_119
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_120
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_121
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_123
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_124
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_125
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_126
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_127
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_128
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_129
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_130
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_131
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_132
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_133
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_134
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_135
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_136
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_137
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_138
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_139
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_140
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_141
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_142
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_143
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_144
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_145
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_146
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_147
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_148
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_149
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_150
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_151
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_152
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_153
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_154
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_155
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_156
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_157
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_158
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_159
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_160
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_161
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_162
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_163
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_164
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_165
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_166
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_167
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_168
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_169
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_170
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_171
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_172
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_173
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_174
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_175
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_176
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_177
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_178
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_179
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_180
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_181
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_182
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_183
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_184
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_185
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_186
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_187
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_188
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_189
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_190
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_191
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_192
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_193
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_194
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_195
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_196
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_197
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_198
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_199
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_200
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_202
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_203
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_205
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_206
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_207
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_208
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_209
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_210
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_211
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_212
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_213
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_214
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_215
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_216
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_217
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_218
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_219
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_220
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_221
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_222
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_223
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_224
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_225
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_226
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_227
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_228
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_229
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_230
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_231
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_234
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_235
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_236
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_237
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_238
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_239
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_240
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_241
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_242
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_243
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_244
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_245
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_247
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_248
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_249
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_250
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_251
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_252
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_253
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_254
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_255
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_256
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_257
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_258
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_259
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_260
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_261
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_262
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_263
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_264
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_265
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_266
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_267
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_268
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_269
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_270
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_271
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_272
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_273
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_274
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_275
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_276
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_277
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_278
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_279
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_280
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_281
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_282
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_283
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_284
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_285
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_286
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_287
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_288
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_289
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_290
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_291
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_292
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_293
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_294
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_295
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_296
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_297
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_298
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_299
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_300
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_301
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_302
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_303
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_304
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_305
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_306
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_307
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_308
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_309
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_310
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_311
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_312
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_313
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_314
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_315
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_316
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_317
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_318
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_319
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_320
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_321
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_322
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_323
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_324
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_325
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_326
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_327
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_328
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_329
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_330
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_331
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_332
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_333
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_334
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_335
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_336
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_337
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_338
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_339
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_340
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_341
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_342
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_343
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_344
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_345
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_346
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_347
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_348
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_349
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_350
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_351
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_352
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_353
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_354
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_355
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_356
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_357
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_358
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_359
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_360
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_361
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_362
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_363
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_364
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_365
+	<attackerWeapon> poseidon:wtype_gun ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_366
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_367
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_368
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_369
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_370
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_371
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_372
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_373
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_374
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_375
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_376
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_377
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_378
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_379
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_380
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_381
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_382
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_383
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_384
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_385
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_386
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_387
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_388
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_389
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_390
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_391
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_392
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_393
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_394
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_395
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_396
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_397
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_398
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_399
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_400
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_401
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_402
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_403
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_404
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_405
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_406
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_407
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_408
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_409
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_410
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_411
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_412
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_413
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_414
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_415
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_416
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_417
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_418
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_419
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_420
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_421
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_422
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_423
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_424
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_425
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_426
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_427
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_428
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2011_429
+	<attackerWeapon> poseidon:wtype_catapult ,
+			 poseidon:wtype_hacksaw ,
+			 poseidon:wtype_knife .
+
+poseidon:event_2011_430
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_431
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_432
+	<attackerWeapon> poseidon:wtype_firearms .
+
+poseidon:event_2011_433
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S1
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S10
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S11
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S12
+	<attackerWeapon> poseidon:wtype_armed .
+
+poseidon:event_2011_S2
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S3
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S4
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S5
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S6
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S7
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S8
+	<attackerWeapon> poseidon:wtype_unspecified .
+
+poseidon:event_2011_S9
+	<attackerWeapon> poseidon:wtype_knife .
+
+poseidon:event_2209_221
+	<attackerWeapon> poseidon:wtype_unspecified .

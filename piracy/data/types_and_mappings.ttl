@@ -1,0 +1,754 @@
+@base             <file:///home/poseidon/piracy_lod/piracy/types_and_mappings.rdf> .
+@prefix     wn20: <http://www.w3.org/2006/03/wn/wn20/instances/> .
+@prefix     skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix      owl: <http://www.w3.org/2002/07/owl#> .
+@prefix     rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix      rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix      cyc: <http://sw.opencyc.org/concept/> .
+@prefix poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/> .
+@prefix      sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+@prefix     wn30: <http://purl.org/vocabularies/princeton/wn30/> .
+
+# Named toplevel resources (108)
+
+poseidon:atype_anti_pollution_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "anti-pollution vessel" .
+
+poseidon:atype_barge
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_barge_lift ,
+		       poseidon:atype_offshore_barge ,
+		       poseidon:atype_tug_and_barge ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "barge" ;
+	skos:related poseidon:atype_barge ,
+		     poseidon:atype_tug ,
+		     poseidon:atype_tug_and_barge .
+
+poseidon:atype_barge_container_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "barge container carrier" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.barge> ,
+			cyc:Mx4rv68PXpwpEbGdrcN5Y29ycA ,
+			wn20:synset-barge-noun-1 .
+
+poseidon:atype_barge_lift
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_barge ;
+	rdfs:label "lift barge" .
+
+poseidon:atype_bitumen_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "bitumen tanker" ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.bitumen> .
+
+poseidon:atype_bulk_carrier
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_cement_carrier ,
+		       poseidon:atype_obo_carrier ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "bulk carrier" ;
+	skos:broadMatch cyc:Mx4rvm1tKJwpEbGdrcN5Y29ycA ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.bulk_carrier> ,
+			cyc:Mx4rviBZo5wpEbGdrcN5Y29ycA .
+
+poseidon:atype_bunkering_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "bunkering tanker" .
+
+poseidon:atype_cable-layer
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "cable-layer" .
+
+poseidon:atype_catamaran
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "catamaran" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.catamaran> ,
+			wn20:synset-catamaran-noun-1 .
+
+poseidon:atype_cement_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_bulk_carrier ;
+	rdfs:label "cement carrier" .
+
+poseidon:atype_chemical_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "chemical tanker" ;
+	rdfs:seeAlso <http://rdf.freebase.com/ns/en.chemical_tanker> ;
+	skos:closeMatch cyc:Mx4rvnc82JwpEbGdrcN5Y29ycA .
+
+poseidon:atype_combination_carrier_OBO
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "combination carrier (OBO)" .
+
+poseidon:atype_container
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_reefer ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "container ship" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.container_ship> ,
+			wn20:synset-container_ship-noun-1 .
+
+poseidon:atype_crane_ship
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_pipe_layer_crane_ship ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "crane ship" .
+
+poseidon:atype_crew_boat
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_passenger_vessel ;
+	rdfs:label "crew boat" .
+
+poseidon:atype_crude_oil_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "crude oil tanker" .
+
+poseidon:atype_cruise
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_passenger_vessel ;
+	rdfs:label "cruise ship" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.cruise_ship> .
+
+poseidon:atype_dhow
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "dhow" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.dhow> ,
+			cyc:Mx4ri8JPoBqcEdyVMwDggVUTGw ,
+			wn20:synset-dhow-noun-1 .
+
+poseidon:atype_dredging_vessel
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_hopper_dredger ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "dredging vessel" ;
+	skos:closeMatch wn20:synset-dredger-noun-1 ;
+	skos:relatedMatch cyc:Mx4rk-FlYieAQdiL5qoPxSYGVg .
+
+poseidon:atype_ferry
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_high-speed_craft ;
+	sem:subTypeOf poseidon:atype_passenger_vessel ;
+	rdfs:label "ferry boat" ;
+	rdfs:seeAlso <http://rdf.freebase.com/ns/en.ferry> ;
+	owl:sameAs poseidon:atype_ro-ro ;
+	skos:closeMatch cyc:Mx4rwQCasJwpEbGdrcN5Y29ycA ,
+			wn20:synset-ferry-noun-1 .
+
+poseidon:atype_fishing_trawler
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_fishing_vessel ;
+	rdfs:label "fishing trawler" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.trawler> ,
+			cyc:Mx4rwQCNo5wpEbGdrcN5Y29ycA ;
+	skos:relatedMatch wn20:synset-trawl-noun-1 .
+
+poseidon:atype_fishing_vessel
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_fishing_trawler ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "fishing vessel" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.fishing_boat> ,
+			cyc:Mx4rvgWe-5wpEbGdrcN5Y29ycA ,
+			wn20:synset-fishing_boat-noun-1 .
+
+poseidon:atype_fpso
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "fpso" ;
+	owl:sameAs poseidon:atype_fso ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.floating_production_storage_and_offloading> .
+
+poseidon:atype_frigate
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_warship ;
+	rdfs:label "frigate" .
+
+poseidon:atype_fso
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "fso" .
+
+poseidon:atype_fspo
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_offshore_processing_tanker ;
+	rdfs:label "floating production storage and offloading" .
+
+poseidon:atype_gas_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "gas carreier" .
+
+poseidon:atype_general_cargo
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_refrigerated_cargo_carrier ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "general cargo vessel" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.cargo_ship> ,
+			cyc:Mx4rwQCRkZwpEbGdrcN5Y29ycA ,
+			wn20:synset-cargo_ship-noun-1 .
+
+poseidon:atype_heavy_load_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "heavy load carrier" .
+
+poseidon:atype_high-speed_craft
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_ferry ;
+	rdfs:label "high-speed craft" .
+
+poseidon:atype_hopper_dredger
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_dredging_vessel ;
+	rdfs:label "hopper dredger" .
+
+poseidon:atype_juice_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "juice tanker" ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.juice> ,
+			  cyc:Mx4rvVjM2ZwpEbGdrcN5Y29ycA ,
+			  wn20:synset-juice-noun-1 .
+
+poseidon:atype_landing_craft
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "landing craft" .
+
+poseidon:atype_law_enforcement_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "law enforcement vessel" ;
+	skos:relatedMatch cyc:Mx4rvV399JwpEbGdrcN5Y29ycA ,
+			  wn20:synset-law_enforcement-noun-1 .
+
+poseidon:atype_livestock_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "livestock carrier" .
+
+poseidon:atype_lng_tanker
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_lpg_tanker ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "liquified natural gas (LNG) carrier" .
+
+poseidon:atype_lpg_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_lng_tanker ,
+		      poseidon:atype_tanker ;
+	rdfs:label "liquified petroleum gas (LPG) carrier" ;
+	skos:closeMatch cyc:Mx4r1d1xNyH0SNaK9JR6yohCRg ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.liquified_petroleum_gas> .
+
+poseidon:atype_merchant_vessel
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_barge_container_carrier ,
+		       poseidon:atype_bulk_carrier ,
+		       poseidon:atype_container ,
+		       poseidon:atype_gas_carrier ,
+		       poseidon:atype_general_cargo ,
+		       poseidon:atype_heavy_load_carrier ,
+		       poseidon:atype_livestock_carrier ,
+		       poseidon:atype_ro-ro ,
+		       poseidon:atype_stone_carrier ,
+		       poseidon:atype_tanker ,
+		       poseidon:atype_vehicle_carrier ,
+		       poseidon:atype_wood_chip_carrier ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "merchant vessel" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.merchant_vessel> ,
+			cyc:Mx4rvm1tKJwpEbGdrcN5Y29ycA .
+
+poseidon:atype_null
+	a sem:ActorType ;
+	rdfs:label "no information provided" .
+
+poseidon:atype_obo_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_bulk_carrier ,
+		      poseidon:atype_tanker ;
+	rdfs:label "ore-bulk-oil carrier (OBO) carrier" .
+
+poseidon:atype_offshore_barge
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_barge ;
+	rdfs:label "offshore barge" .
+
+poseidon:atype_offshore_processing_tanker
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_fspo ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "offshore processing tanker" .
+
+poseidon:atype_offshore_service_ship
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "offshore service ship" .
+
+poseidon:atype_offshore_supply
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_supply_vessel ;
+	rdfs:label "offshore supply vessel" .
+
+poseidon:atype_offshore_support_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "offshore support vessel" .
+
+poseidon:atype_offshore_tug
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tug ;
+	rdfs:label "offshore tug" .
+
+poseidon:atype_oil_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "oil tanker" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.oil_tanker> ,
+			cyc:Mx4rwTD6JpwpEbGdrcN5Y29ycA ,
+			wn20:synset-oil_tanker-noun-1 .
+
+poseidon:atype_other_ship
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "other ship" .
+
+poseidon:atype_passenger_vessel
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_crew_boat ,
+		       poseidon:atype_cruise ,
+		       poseidon:atype_ferry ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "passenger vessel" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.passenger_ship> ,
+			wn20:synset-passenger_ship-noun-1 ;
+	skos:relatedMatch cyc:Mx4rvViM4pwpEbGdrcN5Y29ycA .
+
+poseidon:atype_pilot_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "pilot vessel" ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.harbour_pilot> .
+
+poseidon:atype_pipe_layer_crane_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_crane_ship ;
+	rdfs:label "pipe layer crane vessel" .
+
+poseidon:atype_platform_rig
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "platform rig" ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.drilling_rig> .
+
+poseidon:atype_pleasure_craft
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_yacht ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "pleasure craft" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.pleasure_craft> .
+
+poseidon:atype_pollution_control_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "pollution control vessel" ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.pollution_control> .
+
+poseidon:atype_product_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "product tanker" .
+
+poseidon:atype_pusher_tug
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tug ;
+	rdfs:label "pusher tug" .
+
+poseidon:atype_reefer
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_container ;
+	rdfs:label "reefer" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.reefer> ;
+	skos:relatedMatch cyc:Mx4rvVjQmJwpEbGdrcN5Y29ycA .
+
+poseidon:atype_refrigerated_cargo_carrier
+	a sem:ActorType ;
+	rdfs:label "refrigerated cargo carrier" .
+
+poseidon:atype_research_vessel
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_seismographic_research ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "research vessel" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.research_vessel> ;
+	skos:relatedMatch cyc:Mx4rx-QD-i0gQdmYVa2cf5r76g .
+
+poseidon:atype_ro-ro
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "roll-on/roll-off" ;
+	owl:sameAs poseidon:atype_ferry ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.roro> .
+
+poseidon:atype_sailing_boat
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "sailing boat" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.sailboat> ,
+			<http://rdf.freebase.com/ns/en.sailing_ship> ,
+			cyc:Mx4rK9SXFirdEdqAAAACs71DGQ ,
+			cyc:Mx4ro4XKcC6gEdqAAAACs71DGQ ,
+			wn20:synset-sailboat-noun-1 .
+
+poseidon:atype_search_and_rescue_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_law_enforcement_vessel ;
+	rdfs:label "search and rescue vessel" .
+
+poseidon:atype_seismographic_research
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_research_vessel ;
+	rdfs:label "seismographic research vessel" .
+
+poseidon:atype_semi-submersible_heavy_lift
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "semi-submersible heavy lift" ;
+	skos:broadMatch <http://rdf.freebase.com/ns/en.semi-submersible> .
+
+poseidon:atype_shuttle_tanker
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tanker ;
+	rdfs:label "shuttle tanker" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.shuttle_tanker> .
+
+poseidon:atype_special_purpose_ship
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "special purpose ship" .
+
+poseidon:atype_stone_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "stone carrier" ;
+	skos:relatedMatch cyc:Mx4rwPudOZwpEbGdrcN5Y29ycA ,
+			  wn20:synset-rock-noun-1 .
+
+poseidon:atype_supply_vessel
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_offshore_supply ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "supply vessel" .
+
+poseidon:atype_tanker
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_bitumen_tanker ,
+		       poseidon:atype_bunkering_tanker ,
+		       poseidon:atype_chemical_tanker ,
+		       poseidon:atype_crude_oil_tanker ,
+		       poseidon:atype_juice_tanker ,
+		       poseidon:atype_lng_tanker ,
+		       poseidon:atype_lpg_tanker ,
+		       poseidon:atype_obo_carrier ,
+		       poseidon:atype_oil_tanker ,
+		       poseidon:atype_product_tanker ,
+		       poseidon:atype_shuttle_tanker ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "tanker" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.tanker> ,
+			cyc:Mx4rwQCPwpwpEbGdrcN5Y29ycA .
+
+poseidon:atype_towing_vessel
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_tug ;
+	rdfs:label "towing vessel" .
+
+poseidon:atype_tug
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_offshore_tug ,
+		       poseidon:atype_pusher_tug ,
+		       poseidon:atype_tug_and_barge ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "tug" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.tugboat> ,
+			cyc:Mx4rwQCbHpwpEbGdrcN5Y29ycA ,
+			wn20:synset-tugboat-noun-1 .
+
+poseidon:atype_tug_and_barge
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_barge ,
+		      poseidon:atype_tug ;
+	rdfs:label "tug and barge" ;
+	skos:related poseidon:atype_barge ,
+		     poseidon:atype_tug .
+
+poseidon:atype_vehicle_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "vehicle carrier" ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.vehicle> ,
+			  cyc:Mx4rwLzhaZwpEbGdrcN5Y29ycA ,
+			  wn20:synset-vehicle-noun-1 .
+
+poseidon:atype_vessel
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_anti_pollution_vessel ,
+		       poseidon:atype_barge ,
+		       poseidon:atype_cable-layer ,
+		       poseidon:atype_catamaran ,
+		       poseidon:atype_combination_carrier_OBO ,
+		       poseidon:atype_crane_ship ,
+		       poseidon:atype_dhow ,
+		       poseidon:atype_dredging_vessel ,
+		       poseidon:atype_fishing_vessel ,
+		       poseidon:atype_fpso ,
+		       poseidon:atype_fso ,
+		       poseidon:atype_landing_craft ,
+		       poseidon:atype_law_enforcement_vessel ,
+		       poseidon:atype_merchant_vessel ,
+		       poseidon:atype_offshore_processing_tanker ,
+		       poseidon:atype_offshore_service_ship ,
+		       poseidon:atype_offshore_support_vessel ,
+		       poseidon:atype_other_ship ,
+		       poseidon:atype_passenger_vessel ,
+		       poseidon:atype_pilot_vessel ,
+		       poseidon:atype_platform_rig ,
+		       poseidon:atype_pleasure_craft ,
+		       poseidon:atype_pollution_control_vessel ,
+		       poseidon:atype_research_vessel ,
+		       poseidon:atype_sailing_boat ,
+		       poseidon:atype_semi-submersible_heavy_lift ,
+		       poseidon:atype_special_purpose_ship ,
+		       poseidon:atype_supply_vessel ,
+		       poseidon:atype_tug ,
+		       poseidon:atype_warship ,
+		       poseidon:atype_work_boat ;
+	rdfs:label "vessel" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.ship> ,
+			cyc:Mx4rvVi-55wpEbGdrcN5Y29ycA ,
+			wn20:synset-vessel-noun-2 .
+
+poseidon:atype_warship
+	a sem:ActorType ;
+	sem:hasSubType poseidon:atype_frigate ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "warship" .
+
+poseidon:atype_wood_chip_carrier
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_merchant_vessel ;
+	rdfs:label "wood chip carrier" .
+
+poseidon:atype_work_boat
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_vessel ;
+	rdfs:label "work boat" .
+
+poseidon:atype_yacht
+	a sem:ActorType ;
+	sem:subTypeOf poseidon:atype_pleasure_craft ;
+	rdfs:label "yacht" ;
+	skos:closeMatch <http://rdf.freebase.com/ns/en.yacht> ,
+			cyc:Mx4run14FjC7QdiKbp3T8_xoXA ,
+			wn20:synset-sailboat-noun-1 .
+
+poseidon:etype_anchored
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_stopped ;
+	rdfs:label "anchored" ;
+	skos:closeMatch wn20:synset-anchor-verb-2 ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.anchor> ,
+			  cyc:Mx4rEZN5ZSTPEdyJBQDggVUTGw ,
+			  wn20:synset-anchor-noun-1 .
+
+poseidon:etype_arriving
+	a sem:EventType ;
+	rdfs:label "arriving at a certain location" ;
+	skos:closeMatch cyc:Mx4rvyLZypwpEbGdrcN5Y29ycA ,
+			wn20:synset-arrive-verb-1 .
+
+poseidon:etype_attempted
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_piracy ;
+	rdfs:label "attempted hijacking" ;
+	skos:relatedMatch wn30:synset-attempt-noun-1 ,
+			  cyc:Mx4rwFH745wpEbGdrcN5Y29ycA ,
+			  wn20:synset-attempt-noun-1 .
+
+poseidon:etype_boarded
+	a sem:EventType ;
+	sem:hasSubType poseidon:etype_kidnapped ,
+		       poseidon:etype_robbed ;
+	sem:subTypeOf poseidon:etype_piracy ;
+	rdfs:label "boarding" ;
+	skos:closeMatch wn30:synset-boarding-noun-1 ,
+			cyc:board-verb-1 ,
+			wn20:synset-board-verb-1 .
+
+poseidon:etype_constant_speed
+	a sem:EventType ;
+	rdfs:label "constant speed" ;
+	skos:closeMatch cyc:Mx4rSFyVWlrGEdqAAAACs6hRXg ;
+	skos:relatedMatch wn20:synset-stabilize-verb-1 .
+
+poseidon:etype_departing
+	a sem:EventType ;
+	rdfs:label "departing from a certain location" ;
+	skos:closeMatch cyc:Mx4rvWSHaJwpEbGdrcN5Y29ycA ,
+			wn20:synset-go-verb-3 .
+
+poseidon:etype_encounter
+	a sem:EventType ;
+	rdfs:label "encounter between two actors (individuals or groups)" .
+
+poseidon:etype_fired_upon
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_piracy ;
+	rdfs:label "firing upon victim" ;
+	skos:closeMatch wn30:synset-fire-noun-2 ;
+	skos:relatedMatch cyc:Mx4rvVjrp5wpEbGdrcN5Y29ycA ,
+			  wn20:synset-fire-noun-3 .
+
+poseidon:etype_hijacked
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_piracy ;
+	rdfs:label "hijacking" ;
+	skos:closeMatch wn30:synset-highjacking-noun-1 ,
+			cyc:Mx4rvjbFEZwpEbGdrcN5Y29ycA ,
+			wn20:synset-highjacking-noun-1 .
+
+poseidon:etype_kidnapped
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_boarded ;
+	rdfs:label "kidnapping" ;
+	skos:closeMatch wn30:synset-boarding-noun-1 .
+
+poseidon:etype_moored
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_stopped ;
+	rdfs:label "moored" .
+
+poseidon:etype_moving
+	a sem:EventType ;
+	sem:hasSubType poseidon:etype_underway ;
+	rdfs:label "moving" ;
+	skos:closeMatch cyc:Mx4rvVkEAZwpEbGdrcN5Y29ycA ,
+			wn20:synset-travel-verb-1 .
+
+poseidon:etype_not_specified
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_piracy ;
+	rdfs:label "no information provided" ,
+		   "not specified" .
+
+poseidon:etype_piracy
+	a sem:EventType ;
+	sem:hasSubType poseidon:etype_attempted ,
+		       poseidon:etype_boarded ,
+		       poseidon:etype_fired_upon ,
+		       poseidon:etype_hijacked ,
+		       poseidon:etype_not_specified ,
+		       poseidon:etype_suspicious ;
+	rdfs:label "piracy" ;
+	skos:closeMatch wn30:synset-piracy-noun-1 .
+
+poseidon:etype_robbed
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_boarded ;
+	rdfs:label "robbery" ;
+	skos:closeMatch wn30:synset-robbery-noun-1 .
+
+poseidon:etype_sail_through
+	a sem:EventType ;
+	rdfs:label "sailing through an anchorage without stopping" .
+
+poseidon:etype_slowing_down
+	a sem:EventType ;
+	rdfs:label "slowing down" ;
+	skos:closeMatch wn20:synset-decelerate-verb-1 .
+
+poseidon:etype_speeding_up
+	a sem:EventType ;
+	rdfs:label "speeding up" ;
+	skos:closeMatch wn20:synset-accelerate-verb-1 .
+
+poseidon:etype_stopped
+	a sem:EventType ;
+	sem:hasSubType poseidon:etype_anchored ,
+		       poseidon:etype_moored ;
+	rdfs:label "stopped" ;
+	skos:closeMatch cyc:Mx8Ngh4r0saKNtO1EdmAAACQJw5drh4rvVkEAZwpEbGdrcN5Y29ycA ,
+			wn20:synset-stop-verb-1 .
+
+poseidon:etype_stopped_in_anchorage
+	a sem:EventType ;
+	rdfs:label "stopped at anchoring spot (offshore)" ;
+	skos:broadMatch cyc:Mx8Ngh4r0saKNtO1EdmAAACQJw5drh4rvVkEAZwpEbGdrcN5Y29ycA ,
+			wn20:synset-stop-verb-1 ;
+	skos:relatedMatch <http://rdf.freebase.com/ns/en.anchor> ,
+			  cyc:Mx4rEZN5ZSTPEdyJBQDggVUTGw ,
+			  wn20:synset-anchor-noun-1 .
+
+poseidon:etype_stopped_in_harbor
+	a sem:EventType ;
+	rdfs:label "stopped in a harbor" ;
+	skos:broadMatch cyc:Mx8Ngh4r0saKNtO1EdmAAACQJw5drh4rvVkEAZwpEbGdrcN5Y29ycA ,
+			wn20:synset-stop-verb-1 ;
+	skos:relatedMatch cyc:Mx4rvVjNz5wpEbGdrcN5Y29ycA ,
+			  wn20:synset-seaport-noun-1 .
+
+poseidon:etype_stopped_in_water_lane
+	a sem:EventType ;
+	rdfs:label "stopped in a water lane" ;
+	skos:broadMatch cyc:Mx8Ngh4r0saKNtO1EdmAAACQJw5drh4rvVkEAZwpEbGdrcN5Y29ycA ,
+			wn20:synset-stop-verb-1 .
+
+poseidon:etype_stopped_outside_harbor
+	a sem:EventType ;
+	rdfs:label "stopped, not inside a harbor" ;
+	skos:broadMatch cyc:Mx8Ngh4r0saKNtO1EdmAAACQJw5drh4rvVkEAZwpEbGdrcN5Y29ycA ,
+			wn20:synset-stop-verb-1 .
+
+poseidon:etype_suspicious
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_piracy ;
+	rdfs:label "suspicious vessel spotted" ;
+	skos:closeMatch wn30:synset-sighting-noun-1 .
+
+poseidon:etype_underway
+	a sem:EventType ;
+	sem:subTypeOf poseidon:etype_moving ;
+	rdfs:label "underway" .
+
+poseidon:rtype_Inspector
+	a sem:RoleType ;
+	rdfs:label "Inspector" .
+
+poseidon:rtype_Interrogator
+	a sem:RoleType ;
+	rdfs:label "Interrogator" .
+
+poseidon:rtype_Maintainer
+	a sem:RoleType ;
+	rdfs:label "Maintainer" .
+
+poseidon:rtype_Monitor
+	a sem:RoleType ;
+	rdfs:label "Monitor" .
+
+poseidon:rtype_PictureCompiler
+	a sem:RoleType ;
+	rdfs:label "Picture Compiler" .
