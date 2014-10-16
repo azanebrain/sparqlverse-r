@@ -17,21 +17,38 @@ SELECT (count(*) as ?number_of_triples)
 WHERE { ?s ?p ?o }
 ```
 
-Example query:
+## Parallel Load
 
-SELECT ?event ?place ?region WHERE { ?event ?place ?region } LIMIT 50
+PLoad data (from the terminal):
 ```
-DROP SILENT GRAPH <default>
-;;
-LOAD <file:/home/scl/data/piracy/piracy_eez_2012-01-25T15.ttl>
-;;
-  ## PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> 
-  PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/> 
-  PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/> PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
-  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-SELECT * WHERE {?event sem:hasPlace ?place . ?place eez:inPiracyRegion ?region . }
+ploadsbx piracy /home/scl/data/piracy/*.ttl
+```
+Now run this query to count the number of triples:
+```
+SELECT (count(*) as ?number_of_triples) 
+FROM <piracy>
+WHERE { ?s ?p ?o }
+```
+
+## Query
+
+Now that the data is loaded correctly, try an example query:
+```
+SELECT ?event ?place ?region FROM <piracy> WHERE { ?event ?place ?region } LIMIT 50
+```
+
+Or a properly-syntaxed query:
+```
+PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> 
+PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/> 
+PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/> 
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+SELECT * FROM <piracy> WHERE {?event sem:hasPlace ?place . ?place eez:inPiracyRegion ?region . }
 LIMIT 50
 ```
+
+## Paths
 
 Dataset paths:
 ```
@@ -51,15 +68,10 @@ file:/home/scl/data/piracy/piracy_nga_imb_mapping_2011-10-05T18.ttl
 
 Libraries
 ```
-file:/home/scl/data/piracy/22-rdf-syntax-ns.ttl
+file:/home/scl/data/piracy/22-rdf-syntax-ns
 file:/home/scl/data/piracy/core
 file:/home/scl/data/piracy/owl
-  file:/home/scl/data/piracy/rdf-schema.ttl
-    Error - unsupported functionality: IRI requires leading alpha '../../2002/07/owl#Ontology' Please report the error to SPARQL City Support.
+file:/home/scl/data/piracy/rdf-schema
 file:/home/scl/data/piracy/weapons_2012-02-01
-  file:/home/scl/data/piracy/wgs84_pos
-    Error - unsupported functionality: IRI requires leading alpha '../../../2000/01/rdf-schema#comment' Please report the error to SPARQL City Support.
+file:/home/scl/data/piracy/wgs84_pos
 ```
-
-# Query each DB
-PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/> PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/> PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT * WHERE {?event sem:hasPlace ?place . ?place eez:inPiracyRegion ?region . }

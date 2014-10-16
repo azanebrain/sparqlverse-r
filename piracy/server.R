@@ -19,8 +19,8 @@ sparql_prefix <- "PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
 "
 
 # The query template
-queryTemplateFetch <- "SELECT ?event ?place ?region WHERE { ?event ?place ?region } LIMIT 50"
-# queryTemplateFetch <- "SELECT * WHERE {?event sem:hasPlace ?place . ?place eez:inPiracyRegion ?region . }"
+# queryTemplateFetch <- "SELECT ?event ?place ?region from <piracy> WHERE { ?event ?place ?region } LIMIT 50"
+queryTemplateFetch <- "SELECT * from <piracy> WHERE {?event sem:hasPlace ?place . ?place eez:inPiracyRegion ?region . }"
 queryTemplateJoin <- queryTemplateFetch
 queryTemplatePieSample <- queryTemplateFetch
 
@@ -87,15 +87,8 @@ shinyServer(function(input,output) {
     }
     else {
       switch(input$input_type,
-        # "PieChart" = pie(sorted_counts, col=rainbow(12)),
-        # "PieChart" = pie(slices, labels = lbls, main="Pie Chart of Countries"),
         "PieChart" = plotOutput("piePlot"),
-        # "PieChart" = plotOutput("pie"),
-        # "PieChart" = pie(slices, labels = lbls, main="Pie Chart of Countries"),
-        # "PieChart" = pie(sorted_counts, col=rainbow(12)),
-        # "PieChart" = pie(c(10, 12), col=rainbow(12)),
         "EgoSample" = plotOutput("egoPlot"),
-        # "PieSample" = pie(c(10, 12,4, 16, 8), labels = c("US", "UK", "Australia", "Germany", "France"), main="Pie Chart of Countries")
         "PieSample" = plotOutput("pie")
       )
     }
@@ -113,13 +106,7 @@ shinyServer(function(input,output) {
     pie(slices, labels = lbls, main="Pie Chart of Countries")
   }, width="auto", height=400 )
   output$piePlot <- renderPlot({
-    # q <- paste(sparql_prefix,
-    # "SELECT *
-    #  WHERE {
-    #    ?event sem:hasPlace ?place .
-    #    ?place eez:inPiracyRegion ?region .
-    #  }")
-    q <- paste(sparql_prefix, "SELECT ?event ?place ?region WHERE { ?event ?place ?region } LIMIT 50")
+    q <- paste(sparql_prefix, queryTemplateFetch)
 
     res <- SPARQL(endpoint,q,ns=prefix,extra=options)$results
 
