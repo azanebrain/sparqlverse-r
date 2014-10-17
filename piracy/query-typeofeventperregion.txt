@@ -1,0 +1,7 @@
+SELECT *
+FROM <piracy>
+WHERE {
+ ?event sem:eventType ?event_type .
+ ?event sem:hasPlace ?place .
+ ?place eez:inPiracyRegion ?region .
+} LIMIT ?:limit

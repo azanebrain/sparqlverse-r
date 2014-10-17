@@ -1,0 +1,9 @@
+SELECT *
+FROM <piracy>
+WHERE {
+ ?event sem:eventType ?event_type .
+ ?event sem:hasPlace ?place .
+ ?place wgs84:lat ?lat .
+ ?place wgs84:long ?long .
+} 
+LIMIT ?:limit
