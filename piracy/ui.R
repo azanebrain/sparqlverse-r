@@ -9,10 +9,10 @@ shinyUI(fluidPage(
   sidebarLayout(
     sidebarPanel(
       selectInput( inputId = "input_type",
-        "Input Types:",
+        "Graph Types:",
         choices = c(
-          "PieChart",
-          "TwoWayTable",
+          "Pie Chart",
+          "Two Way Table",
           "Map"
         )
       ),

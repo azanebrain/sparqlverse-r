@@ -32,10 +32,10 @@ shinyServer(function(input,output) {
     if (is.null(input$input_type)) {
       return(NULL)
     }
-    else if (input$input_type == "PieChart" ) {
+    else if (input$input_type == "Pie Chart" ) {
       temp <- sub("\\?:limit", input$limit[1], eventsAndRegionQuery)
     } 
-    else if (input$input_type == "TwoWayTable" ) {
+    else if (input$input_type == "Two Way Table" ) {
       temp <- sub("\\?:limit", input$limit[1], typeOfEventPerRegionQuery)
     } 
     else if (input$input_type == "Map" ) {
@@ -49,14 +49,14 @@ shinyServer(function(input,output) {
       return()
     }
     switch(input$input_type,
-      "PieChart" = sliderInput("limit",
+      "Pie Chart" = sliderInput("limit",
         "Set the range:",
         min = 10,
         max = 500,
         step = 10,
         value = 50
       ),
-      "TwoWayTable" = sliderInput("limit",
+      "Two Way Table" = sliderInput("limit",
         "Set the range:",
         min = 130,
         max = 1000,
@@ -82,8 +82,8 @@ shinyServer(function(input,output) {
     }
     else {
       switch(input$input_type,
-        "PieChart" = plotOutput("piePlot"),
-        "TwoWayTable" = plotOutput("twoWayTablePlot"),
+        "Pie Chart" = plotOutput("piePlot"),
+        "Two Way Table" = plotOutput("twoWayTablePlot"),
         "Map" = plotOutput("mapPlot")
       )
     }
@@ -127,8 +127,8 @@ shinyServer(function(input,output) {
       return()
     }
     switch(input$input_type,
-      "PieChart" = "Amount of piracy events and the geographical region where these events took place.",
-      "TwoWayTable" = "Amount of piracy events per region by type.",
+      "Pie Chart" = "Amount of piracy events and the geographical region where these events took place.",
+      "Two Way Table" = "Amount of piracy events per region by type.",
       "Map" = "Amount of piracy events per region by type."
     )
   })
