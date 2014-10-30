@@ -28,6 +28,7 @@ shinyUI(fluidPage(
       # output the dynamic UI componenet
       tabsetPanel(
         tabPanel("Dynamic UI",
+          textOutput("data_error"),
           uiOutput("ui"),
           tags$p( strong( "About this query:" ) ),
           tags$p( textOutput("about_query") )

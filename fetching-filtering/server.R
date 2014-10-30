@@ -39,7 +39,6 @@ if( length( grep(dataset, loadedData) ) < 1 ) {
     output$data_error <- renderText({
       "Data load ERROR. Make sure the correct dataset is loaded."
     })
-    # input$goButton
   })
 } else {
   # The query template
