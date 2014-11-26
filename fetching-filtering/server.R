@@ -1,9 +1,9 @@
 # libraries
-library(ggplot2)
-library(igraph)
-library(shiny)
-library(SPARQL)
-library(shinyIncubator)
+require(ggplot2)
+require(igraph)
+require(shiny)
+require(SPARQL)
+require(shinyIncubator)
 
 print("______________________________")
 # vars

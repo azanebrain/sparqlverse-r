@@ -1,7 +1,7 @@
 # libraries
-library(ggplot2)
-library(shiny)
-library(SPARQL)
+require(ggplot2)
+require(shiny)
+require(SPARQL)
 
 # vars
 endpoint <- includeText("endpoint.txt")
@@ -48,33 +48,33 @@ shinyServer(function(input,output) {
 
   # Line charts for system performance
   output$cpuUsageLine <- renderPlot({
-    ggplot( data=results() , aes(x=requestnum) ) + 
+    ggplot( data=results() , aes(x=requestnum) ) +
       # Create each line. Unfortunately the labels are titled 'colour'
       geom_line( aes(y=user , colour = 'user')) +
       geom_line( aes(y=sys, colour='sys')) +
       geom_line( aes(y=idle , colour = 'idle')) +
       geom_line(aes(y=iowait, colour='iowait'))  +
       scale_colour_manual(values=c("red","orange","blue","green")) + # The colors match the SVX GUI
-      labs(colour="Metrics:") + 
+      labs(colour="Metrics:") +
       xlab("Request Number") +
       ylab("")
   }, width = "auto", height = 400 )
   output$memoryLine <- renderPlot({
-    ggplot( data=results() , aes(x=requestnum) ) + 
+    ggplot( data=results() , aes(x=requestnum) ) +
       # Create each line. Unfortunately the labels are titled 'colour'
       geom_line( aes(y=size , colour = 'size')) +
       geom_line( aes(y=max , colour = 'max')) +
       scale_colour_manual(values=c("red", "blue")) + # The colors match the SVX GUI
-      labs(colour="Metrics:") + 
+      labs(colour="Metrics:") +
       xlab("Request Number") +
       ylab("")
   }, width = "auto", height = 400 )
   output$commLine <- renderPlot({
-    ggplot( data=results() , aes(x=requestnum) ) + 
+    ggplot( data=results() , aes(x=requestnum) ) +
       # Create each line. Unfortunately the labels are titled 'colour'
       geom_line( aes(y=bytes , colour = 'bytes')) +
       scale_colour_manual(values=c("blue")) + # The colors match the SVX GUI
-      labs(colour="Metrics:") + 
+      labs(colour="Metrics:") +
       xlab("Request Number") +
       ylab("")
   }, width = "auto", height = 400 )

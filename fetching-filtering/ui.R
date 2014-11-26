@@ -1,6 +1,6 @@
 # libraries
-library(shiny)
-library(shinyIncubator)
+require(shiny)
+require(shinyIncubator)
 
 shinyUI(fluidPage(
   tags$head(

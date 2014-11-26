@@ -1,14 +1,14 @@
-library(ggplot2)
-library(shiny)
-library(SPARQL)
+require(ggplot2)
+require(shiny)
+require(SPARQL)
 
 # vars
 endpoint <- includeText("endpoint.txt")
-# Define server logic 
+# Define server logic
 shinyServer(function(input, output) {
-  
-queryTemplate <- 
-"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+
+queryTemplate <-
+"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX d1187: <http://data-gov.tw.rpi.edu/vocab/p/1187/>
 SELECT ?ye ?fi ?ac ?avgperfire (?ac/?fi AS ?avgperfire)
 WHERE {GRAPH <d1187>{
@@ -24,9 +24,9 @@ FILTER(?ye >= ?:yearMin && ?ye <= ?:yearMax)
 query <-reactive({temp <- gsub("\\?:yearMin", input$yearRange[1], queryTemplate)
                   gsub("\\?:yearMax", input$yearRange[2], temp)
 })
-                  
+
 results <-reactive({SPARQL(endpoint, query())$results})
-  
+
 output$avgAcresPerFirePlot <- renderPlot({
   p <- ggplot(results(), aes(x=ye, y=avgperfire, group=1)) +
     geom_point() +
@@ -67,7 +67,7 @@ output$resultsTable <- renderDataTable({
 })
 
 output$SPARQLquery <- renderText({
-  query() 
+  query()
 })
-  
+
 })

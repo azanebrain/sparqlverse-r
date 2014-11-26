@@ -1,5 +1,5 @@
 # libraries
-library(shiny)
+require(shiny)
 
 shinyUI(fluidPage(
   navbarPage(
@@ -17,7 +17,6 @@ shinyUI(fluidPage(
     verbatimTextOutput("input_type_text"),
     tags$p("Dynamic input value:"),
     verbatimTextOutput("dynamic_value")
-  ) 
+  )
 
 ))
-

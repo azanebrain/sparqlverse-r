@@ -1,6 +1,6 @@
 # libraries
-library(SPARQL)
-library(ggmap)
+require(SPARQL)
+require(ggmap)
 
 # vars
 endpoint <- includeText("endpoint.txt")

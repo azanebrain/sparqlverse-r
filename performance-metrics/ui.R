@@ -1,5 +1,5 @@
 # libraries
-library(shiny)
+require(shiny)
 
 shinyUI(fluidPage(
   # tags$head(
