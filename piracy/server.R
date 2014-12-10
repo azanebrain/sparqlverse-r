@@ -4,11 +4,7 @@ require(ggmap)
 
 # vars
 endpoint <- includeText("endpoint.txt")
-# endpoint <- "http://semanticweb.cs.vu.nl/lop/sparql/"
 dataset <- "piracy" # The dataset which should be loaded
-
-# Make sure SVX is running at the endpoint
-# ...
 
 # Test that the correct table is loaded
 loadedData <- SPARQL(endpoint, "select ?g where { graph?g{} }") # List of all the datasets that have been loaded
@@ -26,14 +22,14 @@ if( length( grep(dataset, loadedData) ) < 1 ) {
 
   prefix <- c("lop","http://semanticweb.cs.vu.nl/poseidon/ns/instances/",
     "eez","http://semanticweb.cs.vu.nl/poseidon/ns/eez/")
-  sparql_prefix <- "PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
-    PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/>
-    PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/>
-    PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    "
+    sparql_prefix <- "PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
+      PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/>
+      PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/>
+      PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      "
 
-  # The queries
+  # The query
   sampleQuery <- "SELECT * from <piracy> WHERE {?event sem:hasPlace ?place . ?place eez:inPiracyRegion ?region . } LIMIT 25"
   # All the events and their geographic region
   eventsAndRegionQuery <- includeText('query-eventsandregion.txt')

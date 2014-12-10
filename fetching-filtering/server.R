@@ -5,27 +5,20 @@ require(shiny)
 require(SPARQL)
 require(shinyIncubator)
 
-print("______________________________")
 # vars
 endpoint <- includeText("endpoint.txt")
 dataset <- "tickit" # The dataset which should be loaded
-# dataset <- "debug" # For debugging purposes
 recallCounter <- 1
 loadmsg <- ""
-
-# Make sure the endpoint is operational
-# CURRENTLY DISABLED as getURL(), domain(), and htmlDependency() did not work
 
 # Make sure SVX is running at the endpoint
 # If the data is not loaded this will return `list()` followed by NULL
 # If the data is loaded this will return `list(g = \"<query return set>\")`
 # If SVX is not running, this returns a typical "Opening ending line mismatch" fatal error
 testDataset <- shinyServer(function(input,output,session){
-  # print(paste("now checking if dataset '",dataset,"' is in loadedData '",loadedData,"'"))
   # Only run the load dataset query the first time this function runs
   if ( recallCounter == 1 ) {
-    print("Calling SPARQLverse to load the dataset")
-
+    # print("Calling SPARQLverse to load the dataset")
     progressmax <- sample(35:50, 1)
     withProgress(session, min=1, max=progressmax, expr={
       for(i in 1:progressmax) {
@@ -34,16 +27,13 @@ testDataset <- shinyServer(function(input,output,session){
                     value=i)
         if(i == 30 ){
           SPARQL(endpoint, "DROP SILENT GRAPH <tickit> ;; LOAD <file:$(dflt_load_dir)/tickit.ttl> INTO GRAPH <tickit> ;; SELECT (count(*) as ?number_of_triples) FROM <tickit> WHERE { ?s ?p ?o }") #load the dataset
-          # SPARQL(endpoint, "DROP SILENT GRAPH <tickit> ;; LOAD <file:/home/scl/data/piracy/piracy_imb_2012-01-25T15.ttl> INTO GRAPH <tickit> ;; SELECT (count(*) as ?number_of_triples) FROM <tickit> WHERE { ?s ?p ?o }") # Load a very small dataset
         }
         Sys.sleep(0.1)
       }
     })
-
     # print("sparql load query complete")
   }
 
-  # if( length( grep(dataset, loadedData) ) < 1 ) {
   if( length( grep(dataset, SPARQL(endpoint, "select ?g where { graph?g{} }")) ) < 1 ) {
     recallCounter <<- recallCounter + 1
     if (recallCounter > 2){
@@ -53,7 +43,6 @@ testDataset <- shinyServer(function(input,output,session){
       print(paste("The dataset is loading..."))
       # Wait for 5 seconds
       Sys.sleep(5)
-
       # Recurse this function
       testDataset()
     }
@@ -65,7 +54,6 @@ testDataset <- shinyServer(function(input,output,session){
 })
 
 # Test that the correct table is loaded
-# TODO: This is a static variable defined when the app loads. How can it be setup to refresh on each recursion of testData()?
 loadedData <- SPARQL(endpoint, "select ?g where { graph?g{} }") # List of all the datasets that have been loaded
 
 # Will return 1 if the target data set is loaded
@@ -73,17 +61,9 @@ loadedData <- SPARQL(endpoint, "select ?g where { graph?g{} }") # List of all th
 if( length( grep(dataset, loadedData) ) < 1 ) {
   # The dataset is not loaded. Provide an error message
   shinyServer(function(input,output,session) {
-    print(paste("Dataset not loaded. Loading '",dataset,"'..."))
-    # Create a progress message so the user can be informed of the dataload status
-    # Unfortunately, this just flashes for a moment
-    # withProgress(session, {
-    #   setProgress(message = "The dataset has not been loaded. Please wait while it is loaded.",
-    #     detail = "This may take a few moments...")
-    # })
-
+    # print(paste("Dataset not loaded. Loading '",dataset,"'..."))
     # Begin testing if the correct dataset is loaded
     testDataset(input,output,session)
-
     # Update the error/status message
     output$data_error <- renderText({
       loadmsg
@@ -97,12 +77,6 @@ if( length( grep(dataset, loadedData) ) < 1 ) {
   queryTemplateAggregation <- includeText("template-aggregation.txt")
 
   shinyServer(function(input,output,session) {
-    # Wrap the entire expensive operation with withProgress
-    # withProgress(session, {
-    #   setProgress(message = "Drawing the graph now",
-    #     detail = "This may take a few moments...")
-    # })
-    # The query that is being sent to SVX
     query <- reactive({
       if (is.null(input$input_type)) {
         return(NULL)

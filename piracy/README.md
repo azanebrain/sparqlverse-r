@@ -9,11 +9,11 @@ Description: Analysis utilizing multiple datasets from the Linked Open Piracy da
 
 ## Test each dataset individually
 
-Some of the datasets have special characters we can't read, and relative paths. Test each set and make sure they are pristine.
+Some of the datasets have special characters we can't read, and relative paths. Test each set and make sure they are pristine:
 ```
 LOAD <file:PATH/TO/DATA/FILE>
 ;;
-SELECT (count(*) as ?number_of_triples) 
+SELECT (count(*) as ?number_of_triples)
 WHERE { ?s ?p ?o }
 ```
 
@@ -23,9 +23,9 @@ PLoad data (from the terminal):
 ```
 ploadsbx piracy /home/scl/data/piracy/*.ttl
 ```
-Now run this query to count the number of triples:
+Now run this query to count the number of triples and confirm the dataset was loaded correctly:
 ```
-SELECT (count(*) as ?number_of_triples) 
+SELECT (count(*) as ?number_of_triples)
 FROM <piracy>
 WHERE { ?s ?p ?o }
 ```
@@ -39,11 +39,11 @@ SELECT ?event ?place ?region FROM <piracy> WHERE { ?event ?place ?region } LIMIT
 
 Or a properly-syntaxed query:
 ```
-PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/> 
-PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/> 
-PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/> 
-PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX sem: <http://semanticweb.cs.vu.nl/2009/11/sem/>
+PREFIX poseidon: <http://semanticweb.cs.vu.nl/poseidon/ns/instances/>
+PREFIX eez: <http://semanticweb.cs.vu.nl/poseidon/ns/eez/>
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT * FROM <piracy> WHERE {?event sem:hasPlace ?place . ?place eez:inPiracyRegion ?region . }
 LIMIT 50
 ```

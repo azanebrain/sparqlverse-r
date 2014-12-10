@@ -1,4 +1,6 @@
-# Description: Fetching and Filtering Examples
+# Fetching and Filtering
 
-## Setup 
+Description: Fetching and filtering playground examples
+
+## Setup
 - Make a copy of `endpoint.txt.sample` named `endpoint.txt` and set the endpoint for SVX
