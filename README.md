@@ -1,10 +1,8 @@
-# SPARQLvsR
-
-SPARQLverse implementation with [R](http://www.rstudio.com/)
+# SPARQLverse implementation with [R](http://www.rstudio.com/)
 
 ## Run
 
-- Boot up the system with `sudo rstudio-server start` (sometimes you need to use `restart`) and access on port 8787 (http://ws-akeen:8787/).
+- Boot up the system with `sudo rstudio-server start` (sometimes you need to use `restart`) and access on port 8787 (http://localhost:8787/).
 - Log in as the user, or paraccel
 - Run this command from the RStudio Console panel:
 ```
@@ -14,7 +12,7 @@ or from the terminal
 ```
 R -e "shiny::runApp('~/sparqlverse-r/shinyappsv')" &
 ```
-It will try to automatically pop open a new window with the visualization. If it does not work, it will tell you the port. Copy that and follow this pattern: `http://ws-akeen:8787/p/<<port>>`
+It will try to automatically pop open a new window with the visualization. If it does not work, it will tell you the port. Copy that and follow this pattern: `http://localhost:8787/p/<<port>>`
 
 ## Build assets for development
 
@@ -26,7 +24,7 @@ npm run watch
 
 ## Shiny Server
 
-- Boot up the Shiny Server with `start shiny-server` and access port 3838 (https://ws-akeen:3838)
+- Boot up the Shiny Server with `start shiny-server` and access port 3838 (https://localhost:3838)
 
 ## Run in the browser
 
