@@ -1,9 +1,15 @@
-#Prototype for converting SAS data sets (sas7bdat) to RDF  
+# Prototype for converting SAS data sets (sas7bdat) to RDF  
 library(sas7bdat)
-#Set to working directory
+# Set to working directory
 setwd("~/sparqlverse-r/r/sas7bdat")
 
+# Function trim to trim spaces from input string x
+# Not currently used
 trim <- function( x ) {gsub("(^[[:space:]]+|[[:space:]]+$)", "", x)}
+
+# Function toIRI to convert name to IRI's 
+# name: row names and column names
+# 
 toIRI <- function(name){ gsub(" ", "", paste('<',name,'>'), fixed = TRUE)}
 
 # Function sas7bdat2rdf
@@ -16,8 +22,6 @@ sas7bdat2rdf <- function(sas7bdatfile){
   View(x)
   x
 }
-
-csv <- sas7bdat2rdf("calcmilk.sas7bdat")
 
 # Function formatRowTTL Format CSV row to TTL
 # rowname: the subject IRI for the row
@@ -34,15 +38,23 @@ formatRowTTL <- function(rowname, names, row){
 formatTTL <- function(row){
   formatRowTTL(attributes(row)$row.names, names(row), row)
 }
+
+# Testing ------------------------------------------>
+
+# convert "calcmilk.sas7bdat" to csv
+# takes about 5 seconds
+csv <- sas7bdat2rdf("calcmilk.sas7bdat")
+
 # test conversion of one row
 # testFormatTTL <- function(df){
 #   #formatRowTTL(attributes(csv)$row.names[1], names(csv), csv[1,] )
 #   apply(formatRowTTL(attributes(csv)$row.names, names(csv), csv )
 # }
 
+# Test conversion of a row to TTL - this works
 ttlrow <- formatRowTTL(attributes(csv)$row.names[1], names(csv), csv[1,] )
 
-# Test conversion to TTL
+# Test conversion of a csv to TTL - issue with accessing row names
 ttl <- apply(csv, 1, function(row){formatRowTTL(row.names(row), names(row), row)})
 
 View(sas7bdat2rdf("calcmilk.sas7bdat"))
